@@ -4,7 +4,7 @@ import { problems } from '../data/siteContent'
 
 function ProblemSection() {
   return (
-    <section className="subtle-grid bg-slate-50 px-6 py-24">
+    <section className="subtle-grid bg-[#eef3fb] px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="The problem"

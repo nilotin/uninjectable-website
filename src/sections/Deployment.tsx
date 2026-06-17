@@ -5,7 +5,7 @@ function Deployment() {
   return (
     <section
       id="deployment"
-      className="subtle-grid bg-slate-50 px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-[#eef3fb] px-6 py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -18,24 +18,28 @@ function Deployment() {
           {deploymentOptions.map((option) => (
             <div
               key={option.title}
-              className="enterprise-panel rounded-3xl p-8 transition duration-200 hover:-translate-y-1"
+              className="pixel-card bg-[#f8fbff] p-8 transition duration-200 hover:-translate-y-1"
             >
-              <div className="font-mono-accent mb-6 inline-flex h-12 min-w-12 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 px-3 text-sm font-semibold text-blue-700">
-                {option.icon}
+              <div className="pixel-mini-icon mb-6 flex h-14 w-14 items-center justify-center bg-slate-100 text-blue-700">
+                <span className="font-mono-accent text-sm font-semibold">
+                  {option.icon}
+                </span>
               </div>
 
-              <h3 className="text-2xl font-bold tracking-tight text-slate-950">
+              <h3 className="text-[2rem] font-extrabold leading-tight tracking-tight text-slate-950">
                 {option.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-slate-600">
+              <p className="mt-5 text-lg leading-8 text-slate-500">
                 {option.description}
               </p>
+
+              <div className="mt-8 h-[6px] w-20 bg-blue-600" />
             </div>
           ))}
         </div>
 
-        <div className="enterprise-panel-dark mt-20 overflow-hidden rounded-[2rem] bg-slate-950 text-white">
+        <div className="pixel-card-dark mt-20 overflow-hidden bg-[#08111f] text-white">
           <div className="console-bar flex items-center justify-between px-5 py-4">
             <div>
               <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
@@ -46,7 +50,7 @@ function Deployment() {
               </h3>
             </div>
 
-            <span className="hidden rounded-full border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:block">
+            <span className="hidden border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:block">
               Secure by design
             </span>
           </div>
@@ -57,11 +61,11 @@ function Deployment() {
                 Not another chatbot dashboard
               </p>
 
-              <h3 className="mt-4 text-4xl font-bold tracking-tight">
+              <h3 className="mt-4 text-6xl font-extrabold leading-[0.95] tracking-tight text-white">
                 Built for real agent workflows.
               </h3>
 
-              <p className="mt-5 leading-7 text-slate-300">
+              <p className="mt-6 text-lg leading-8 text-slate-300">
                 Uninjectable is a runtime control layer designed specifically
                 for AI agent actions, policies, approvals, and auditability.
               </p>
@@ -71,11 +75,13 @@ function Deployment() {
               {differentiators.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-3xl border border-white/10 bg-white/[0.04] p-5"
+                  className="pixel-card-dark bg-[#111c2d] p-5"
                 >
-                  <h4 className="font-bold text-white">{item.title}</h4>
+                  <h4 className="text-2xl font-extrabold leading-tight text-white">
+                    {item.title}
+                  </h4>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                  <p className="mt-3 text-base leading-8 text-slate-300">
                     {item.description}
                   </p>
                 </div>

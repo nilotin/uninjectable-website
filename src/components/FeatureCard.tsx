@@ -15,24 +15,24 @@ function FeatureCard({
 
   return (
     <div
-      className={`group rounded-3xl p-6 transition duration-200 hover:-translate-y-1 ${
+      className={`group p-6 transition duration-200 hover:-translate-y-1 ${
         isDark
-          ? 'enterprise-panel-dark text-white'
-          : 'enterprise-panel text-slate-950'
+          ? 'pixel-card-dark bg-[#0f1b2d] text-white'
+          : 'pixel-card bg-[#f8fbff] text-slate-950'
       }`}
     >
       <div
-        className={`font-mono-accent mb-5 inline-flex h-11 min-w-11 items-center justify-center rounded-xl border px-3 text-xs font-semibold ${
+        className={`pixel-mini-icon mb-6 flex h-14 w-14 items-center justify-center text-sm font-semibold ${
           isDark
-            ? 'border-cyan-300/20 bg-cyan-300/10 text-cyan-300'
-            : 'border-blue-200 bg-blue-50 text-blue-700'
+            ? 'bg-cyan-300/10 text-cyan-300'
+            : 'bg-slate-100 text-blue-700'
         }`}
       >
-        {icon}
+        <span className="font-mono-accent">{icon}</span>
       </div>
 
       <h3
-        className={`text-lg font-bold tracking-tight ${
+        className={`text-[1.65rem] font-extrabold uppercase leading-tight tracking-tight ${
           isDark ? 'text-white' : 'text-slate-950'
         }`}
       >
@@ -40,16 +40,16 @@ function FeatureCard({
       </h3>
 
       <p
-        className={`mt-3 text-sm leading-6 ${
-          isDark ? 'text-slate-300' : 'text-slate-600'
+        className={`mt-5 text-base leading-8 ${
+          isDark ? 'text-slate-300' : 'text-slate-500'
         }`}
       >
         {description}
       </p>
 
       <div
-        className={`mt-6 h-px w-full ${
-          isDark ? 'bg-white/10' : 'bg-slate-200'
+        className={`mt-8 h-[6px] w-20 ${
+          isDark ? 'bg-cyan-300' : 'bg-blue-600'
         }`}
       />
     </div>

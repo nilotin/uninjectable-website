@@ -168,4 +168,16 @@ export const teamMembers = [
     description:
       'Leads operations, customer validation, project coordination, and pilot process management.',
   },
+  {
+    name: 'Cansın İsmail Bahçeci',
+    role: 'CBO',
+    description:
+      'Leads business strategy, commercial partnerships, customer development, and go-to-market positioning.',
+  },
+  {
+    name: 'Arif Emre Kılıç',
+    role: 'CFO',
+    description:
+      'Leads financial planning, budgeting, pricing analysis, investor reporting, and financial operations.',
+  },
 ]
