@@ -14,15 +14,15 @@ function Button({
   onClick,
 }: ButtonProps) {
   const baseClasses =
-    'inline-flex items-center justify-center gap-2 border-2 px-5 py-3 text-sm font-black uppercase tracking-wide transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none'
+    'inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950'
 
   const variants = {
     primary:
-      'border-slate-950 bg-[#ff4fa3] text-white shadow-[4px_4px_0_#101936] hover:bg-[#ff6fb4]',
+      'bg-blue-600 text-white shadow-lg shadow-blue-600/20 hover:bg-blue-500',
     secondary:
-      'border-slate-950 bg-white text-slate-950 shadow-[4px_4px_0_#101936] hover:bg-[#edf4ff]',
+      'border border-slate-300 bg-white text-slate-950 hover:border-blue-300 hover:bg-blue-50',
     dark:
-      'border-[#35d6ff] bg-[#071033] text-white shadow-[4px_4px_0_#35d6ff] hover:bg-[#10246b]',
+      'border border-white/15 bg-white/5 text-white hover:bg-white/10',
   }
 
   const className = `${baseClasses} ${variants[variant]}`

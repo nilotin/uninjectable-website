@@ -4,27 +4,26 @@ function CTA() {
   return (
     <section
       id="contact"
-      className="dark-pixel-grid bg-[#071033] px-6 py-24 scroll-mt-24"
+      className="dark-subtle-grid bg-slate-950 px-6 py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="retro-panel-dark scanline relative overflow-hidden bg-[#050a26] p-8 text-white md:p-12">
-          <div className="absolute right-8 top-8 hidden border-2 border-[#35d6ff] bg-[#071033] px-4 py-3 md:block">
-            <p className="font-pixel text-[10px] text-[#35d6ff]">
-              AGENTS PROTECTED
+        <div className="enterprise-panel-dark relative overflow-hidden rounded-[2rem] p-8 text-white md:p-12">
+          <div className="absolute right-8 top-8 hidden rounded-full border border-green-400/20 bg-green-400/10 px-4 py-2 md:block">
+            <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-green-300">
+              System online
             </p>
-            <p className="mt-2 font-pixel text-xl text-[#7cff7a]">002417</p>
           </div>
 
           <div className="max-w-3xl">
-            <p className="font-pixel text-xs text-[#ffd84d]">
-              MAKE AUTONOMOUS AI OBSERVABLE.
+            <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              Make autonomous AI accountable
             </p>
 
-            <h2 className="mt-4 text-4xl font-black uppercase tracking-tight md:text-6xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl">
               Building AI agents for real business operations?
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-[#dfe9ff]">
+            <p className="mt-6 text-lg leading-8 text-slate-300">
               Let’s make them observable, controllable, and accountable before
               they impact your customers, systems, or operations.
             </p>

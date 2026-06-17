@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --bg-deep: #050a26;
-  --bg-ink: #071033;
-  --panel-blue: #10246b;
-  --paper-blue: #edf4ff;
-  --pixel-pink: #ff4fa3;
-  --pixel-cyan: #35d6ff;
-  --pixel-yellow: #ffd84d;
-  --pixel-green: #7cff7a;
-  --pixel-red: #ff4d57;
-  --ink: #101936;
+  --bg-deep: #050816;
+  --bg-navy: #08111f;
+  --panel-navy: #0f1b2d;
+  --soft-blue: #eaf1ff;
+  --line: #d7e0ef;
+  --accent-blue: #2563eb;
+  --accent-cyan: #38bdf8;
+  --accent-pink: #ec4899;
+  --accent-green: #22c55e;
+  --accent-yellow: #f59e0b;
+  --accent-red: #ef4444;
+  --ink: #0f172a;
+  --muted: #64748b;
   --font-body: 'Inter', system-ui, sans-serif;
-  --font-pixel: 'Silkscreen', monospace;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
 html {
@@ -28,65 +31,46 @@ body {
 }
 
 ::selection {
-  background: var(--pixel-pink);
+  background: var(--accent-blue);
   color: white;
 }
 
-.font-pixel {
-  font-family: var(--font-pixel);
+.font-pixel,
+.font-mono-accent {
+  font-family: var(--font-mono);
 }
 
-.pixel-grid {
+.subtle-grid {
   background-image:
-    linear-gradient(rgba(16, 36, 107, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 36, 107, 0.08) 1px, transparent 1px);
-  background-size: 18px 18px;
+    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-.dark-pixel-grid {
+.dark-subtle-grid {
   background-image:
-    linear-gradient(rgba(53, 214, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(53, 214, 255, 0.08) 1px, transparent 1px);
-  background-size: 22px 22px;
+    linear-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
-.retro-panel {
-  border: 2px solid #101936;
-  box-shadow:
-    4px 4px 0 #101936,
-    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
-    inset -2px -2px 0 rgba(16, 25, 54, 0.18);
+.enterprise-panel {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
 }
 
-.retro-panel-dark {
-  border: 2px solid rgba(53, 214, 255, 0.7);
-  box-shadow:
-    5px 5px 0 rgba(0, 0, 0, 0.5),
-    inset 2px 2px 0 rgba(255, 255, 255, 0.12),
-    inset -2px -2px 0 rgba(0, 0, 0, 0.35);
+.enterprise-panel-dark {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 27, 45, 0.74);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.38);
 }
 
-.retro-window-bar {
-  background: linear-gradient(90deg, #123cbe, #071033);
-  color: white;
-  border-bottom: 2px solid #101936;
+.console-bar {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(8, 17, 31, 0.92);
 }
 
-.scanline {
-  position: relative;
-}
-
-.scanline::after {
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.04) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-  mix-blend-mode: overlay;
+.status-dot {
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
 }

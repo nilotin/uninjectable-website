@@ -8,39 +8,31 @@ type FeatureCardProps = {
 function FeatureCard({
   title,
   description,
-  icon = '✦',
+  icon = '01',
   variant = 'light',
 }: FeatureCardProps) {
   const isDark = variant === 'dark'
 
   return (
     <div
-      className={`group relative overflow-hidden p-6 transition hover:-translate-y-1 ${
+      className={`group rounded-3xl p-6 transition duration-200 hover:-translate-y-1 ${
         isDark
-          ? 'retro-panel-dark bg-[#071033] text-white'
-          : 'retro-panel bg-[#f8fbff] text-slate-950'
+          ? 'enterprise-panel-dark text-white'
+          : 'enterprise-panel text-slate-950'
       }`}
     >
       <div
-        className={`absolute right-3 top-3 font-pixel text-[10px] ${
-          isDark ? 'text-[#35d6ff]/60' : 'text-[#123cbe]/40'
-        }`}
-      >
-        //
-      </div>
-
-      <div
-        className={`mb-5 inline-flex h-12 min-w-12 items-center justify-center border-2 px-3 font-pixel text-xs ${
+        className={`font-mono-accent mb-5 inline-flex h-11 min-w-11 items-center justify-center rounded-xl border px-3 text-xs font-semibold ${
           isDark
-            ? 'border-[#35d6ff] bg-[#050a26] text-[#35d6ff]'
-            : 'border-slate-950 bg-[#edf4ff] text-[#123cbe] shadow-[3px_3px_0_#101936]'
+            ? 'border-cyan-300/20 bg-cyan-300/10 text-cyan-300'
+            : 'border-blue-200 bg-blue-50 text-blue-700'
         }`}
       >
         {icon}
       </div>
 
       <h3
-        className={`text-lg font-black uppercase leading-6 ${
+        className={`text-lg font-bold tracking-tight ${
           isDark ? 'text-white' : 'text-slate-950'
         }`}
       >
@@ -49,15 +41,15 @@ function FeatureCard({
 
       <p
         className={`mt-3 text-sm leading-6 ${
-          isDark ? 'text-slate-300' : 'text-slate-700'
+          isDark ? 'text-slate-300' : 'text-slate-600'
         }`}
       >
         {description}
       </p>
 
       <div
-        className={`mt-6 h-1 w-16 transition group-hover:w-24 ${
-          isDark ? 'bg-[#ff4fa3]' : 'bg-[#123cbe]'
+        className={`mt-6 h-px w-full ${
+          isDark ? 'bg-white/10' : 'bg-slate-200'
         }`}
       />
     </div>
