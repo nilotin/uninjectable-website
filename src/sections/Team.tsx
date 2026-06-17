@@ -5,12 +5,12 @@ function Team() {
   return (
     <section
       id="team"
-      className="pixel-grid bg-[#f8fbff] px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-white px-6 py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Founding team"
-          title="Built by a focused team"
+          eyebrow="Team"
+          title="Built by a focused founding team"
           description="Uninjectable is being developed by a technical and operational founding team focused on AI governance, enterprise security, and customer validation."
         />
 
@@ -18,9 +18,9 @@ function Team() {
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="retro-panel bg-white p-8 transition hover:-translate-y-1"
+              className="enterprise-panel rounded-3xl p-8 transition duration-200 hover:-translate-y-1"
             >
-              <div className="mb-6 flex h-16 w-16 items-center justify-center border-2 border-slate-950 bg-[#071033] font-pixel text-sm text-[#35d6ff] shadow-[3px_3px_0_#101936]">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50 text-sm font-bold text-blue-700">
                 {member.name
                   .split(' ')
                   .map((word) => word[0])
@@ -28,21 +28,21 @@ function Team() {
                   .slice(0, 2)}
               </div>
 
-              <h3 className="text-xl font-black uppercase text-slate-950">
+              <h3 className="text-xl font-bold tracking-tight text-slate-950">
                 {member.name}
               </h3>
 
-              <p className="font-pixel mt-2 text-[10px] text-[#ff4fa3]">
+              <p className="font-mono-accent mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
                 {member.role}
               </p>
 
-              <p className="mt-5 text-sm leading-6 text-slate-700">
+              <p className="mt-5 text-sm leading-6 text-slate-600">
                 {member.description}
               </p>
 
-              <div className="mt-6 border-t-2 border-slate-950 pt-4">
-                <span className="font-pixel text-[10px] text-[#123cbe]">
-                  LINKEDIN //
+              <div className="mt-6 border-t border-slate-200 pt-4">
+                <span className="font-mono-accent text-xs text-slate-400">
+                  LinkedIn profile
                 </span>
               </div>
             </div>

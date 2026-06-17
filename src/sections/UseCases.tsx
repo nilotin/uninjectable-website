@@ -6,11 +6,11 @@ function UseCases() {
   return (
     <section
       id="use-cases"
-      className="pixel-grid bg-[#f8fbff] px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-white px-6 py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Built for real-world AI"
+          eyebrow="Use cases"
           title="Protect workflows where AI agents touch business systems"
           description="Uninjectable is designed for teams moving AI agents from simple chat interfaces into real operational environments."
         />
