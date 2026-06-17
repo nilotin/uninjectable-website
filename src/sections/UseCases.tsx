@@ -4,12 +4,15 @@ import { useCases } from '../data/siteContent'
 
 function UseCases() {
   return (
-    <section id="use-cases" className="bg-white px-6 py-24 scroll-mt-24">
+    <section
+      id="use-cases"
+      className="pixel-grid bg-[#f8fbff] px-6 py-24 scroll-mt-24"
+    >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Use cases"
-          title="Built for real business workflows"
-          description="Uninjectable is designed for teams that are moving AI agents from simple chat interfaces into real operational systems."
+          eyebrow="Built for real-world AI"
+          title="Protect workflows where AI agents touch business systems"
+          description="Uninjectable is designed for teams moving AI agents from simple chat interfaces into real operational environments."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

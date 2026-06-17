@@ -2,28 +2,40 @@ import Button from '../components/Button'
 
 function CTA() {
   return (
-    <section id="contact" className="bg-white px-6 py-24 scroll-mt-24">
+    <section
+      id="contact"
+      className="dark-pixel-grid bg-[#071033] px-6 py-24 scroll-mt-24"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-16 text-center text-white md:px-12">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.35),transparent_40%)]" />
+        <div className="retro-panel-dark scanline relative overflow-hidden bg-[#050a26] p-8 text-white md:p-12">
+          <div className="absolute right-8 top-8 hidden border-2 border-[#35d6ff] bg-[#071033] px-4 py-3 md:block">
+            <p className="font-pixel text-[10px] text-[#35d6ff]">
+              AGENTS PROTECTED
+            </p>
+            <p className="mt-2 font-pixel text-xl text-[#7cff7a]">002417</p>
+          </div>
 
-          <div className="relative mx-auto max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
-              Get in touch
+          <div className="max-w-3xl">
+            <p className="font-pixel text-xs text-[#ffd84d]">
+              MAKE AUTONOMOUS AI OBSERVABLE.
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-4xl font-black uppercase tracking-tight md:text-6xl">
               Building AI agents for real business operations?
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-slate-300">
+            <p className="mt-6 text-lg leading-8 text-[#dfe9ff]">
               Let’s make them observable, controllable, and accountable before
               they impact your customers, systems, or operations.
             </p>
 
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button href="mailto:hello@uninjectable.com">
                 Request a Discovery Call
+              </Button>
+
+              <Button href="#product" variant="dark">
+                Explore Platform
               </Button>
             </div>
           </div>

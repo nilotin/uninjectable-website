@@ -15,22 +15,32 @@ function FeatureCard({
 
   return (
     <div
-      className={`rounded-2xl border p-6 transition hover:-translate-y-1 ${
+      className={`group relative overflow-hidden p-6 transition hover:-translate-y-1 ${
         isDark
-          ? 'border-white/10 bg-white/5 shadow-2xl shadow-blue-950/20'
-          : 'border-slate-200 bg-white shadow-sm'
+          ? 'retro-panel-dark bg-[#071033] text-white'
+          : 'retro-panel bg-[#f8fbff] text-slate-950'
       }`}
     >
       <div
-        className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-lg ${
-          isDark ? 'bg-blue-500/10 text-blue-300' : 'bg-blue-50 text-blue-600'
+        className={`absolute right-3 top-3 font-pixel text-[10px] ${
+          isDark ? 'text-[#35d6ff]/60' : 'text-[#123cbe]/40'
+        }`}
+      >
+        //
+      </div>
+
+      <div
+        className={`mb-5 inline-flex h-12 min-w-12 items-center justify-center border-2 px-3 font-pixel text-xs ${
+          isDark
+            ? 'border-[#35d6ff] bg-[#050a26] text-[#35d6ff]'
+            : 'border-slate-950 bg-[#edf4ff] text-[#123cbe] shadow-[3px_3px_0_#101936]'
         }`}
       >
         {icon}
       </div>
 
       <h3
-        className={`text-lg font-semibold ${
+        className={`text-lg font-black uppercase leading-6 ${
           isDark ? 'text-white' : 'text-slate-950'
         }`}
       >
@@ -39,11 +49,17 @@ function FeatureCard({
 
       <p
         className={`mt-3 text-sm leading-6 ${
-          isDark ? 'text-slate-300' : 'text-slate-600'
+          isDark ? 'text-slate-300' : 'text-slate-700'
         }`}
       >
         {description}
       </p>
+
+      <div
+        className={`mt-6 h-1 w-16 transition group-hover:w-24 ${
+          isDark ? 'bg-[#ff4fa3]' : 'bg-[#123cbe]'
+        }`}
+      />
     </div>
   )
 }
