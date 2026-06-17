@@ -67,3 +67,69 @@ export const workflowSteps = [
   'Human reviews when needed',
   'Audit trail is stored',
 ]
+
+export const useCases = [
+  {
+    title: 'Customer Support AI Agents',
+    description:
+      'Review refunds, credits, account changes, escalations, and customer-facing messages before execution.',
+    icon: 'CS',
+  },
+  {
+    title: 'IT / Cloud Operations',
+    description:
+      'Govern infrastructure changes, incident workflows, and operational commands triggered by AI agents.',
+    icon: 'IT',
+  },
+  {
+    title: 'Security Operations',
+    description:
+      'Add approval and traceability to AI-assisted triage, alert handling, and response workflows.',
+    icon: 'SO',
+  },
+  {
+    title: 'Internal Workflow Agents',
+    description:
+      'Control agents that update CRM records, send emails, modify tickets, or interact with internal tools.',
+    icon: 'WF',
+  },
+]
+
+export const deploymentOptions = [
+  {
+    title: 'Uninjectable Cloud',
+    description:
+      'A managed platform for teams that want fast onboarding, automatic updates, and minimal infrastructure work.',
+    icon: '☁',
+  },
+  {
+    title: 'Private Cloud',
+    description:
+      'A dedicated environment for organizations that require stronger isolation and enterprise deployment control.',
+    icon: '◇',
+  },
+  {
+    title: 'On-Prem / Self-Hosted',
+    description:
+      'For regulated teams that need to keep infrastructure, data, and governance workflows inside their own environment.',
+    icon: '▣',
+  },
+]
+
+export const differentiators = [
+  {
+    title: 'Action-level governance',
+    description:
+      'Control every important agent action, not just conversations or system logs.',
+  },
+  {
+    title: 'Deterministic policy decisions',
+    description:
+      'Use explicit policy checks for allow, review, and block decisions instead of relying only on LLM judgment.',
+  },
+  {
+    title: 'Explainable audit trail',
+    description:
+      'Understand why an action was allowed, reviewed, or blocked with complete decision context.',
+  },
+]
