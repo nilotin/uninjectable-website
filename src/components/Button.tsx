@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 
 type ButtonProps = {
   children: ReactNode
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'dark'
   href?: string
   onClick?: () => void
 }
@@ -14,21 +14,24 @@ function Button({
   onClick,
 }: ButtonProps) {
   const baseClasses =
-    'inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition'
+    'inline-flex items-center justify-center gap-2 border-2 px-5 py-3 text-sm font-black uppercase tracking-wide transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none'
 
   const variants = {
     primary:
-      'bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20',
+      'border-slate-950 bg-[#ff4fa3] text-white shadow-[4px_4px_0_#101936] hover:bg-[#ff6fb4]',
     secondary:
-      'border border-white/15 bg-white/5 text-white hover:bg-white/10',
+      'border-slate-950 bg-white text-slate-950 shadow-[4px_4px_0_#101936] hover:bg-[#edf4ff]',
+    dark:
+      'border-[#35d6ff] bg-[#071033] text-white shadow-[4px_4px_0_#35d6ff] hover:bg-[#10246b]',
   }
 
   const className = `${baseClasses} ${variants[variant]}`
 
   if (href) {
     return (
-      <a href={href} className={className}>
+      <a href={href} onClick={onClick} className={className}>
         {children}
+        <span aria-hidden="true">→</span>
       </a>
     )
   }
@@ -36,6 +39,7 @@ function Button({
   return (
     <button onClick={onClick} className={className}>
       {children}
+      <span aria-hidden="true">→</span>
     </button>
   )
 }

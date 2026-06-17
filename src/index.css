@@ -1,4 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Silkscreen:wght@400;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --bg-deep: #050a26;
+  --bg-ink: #071033;
+  --panel-blue: #10246b;
+  --paper-blue: #edf4ff;
+  --pixel-pink: #ff4fa3;
+  --pixel-cyan: #35d6ff;
+  --pixel-yellow: #ffd84d;
+  --pixel-green: #7cff7a;
+  --pixel-red: #ff4d57;
+  --ink: #101936;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-pixel: 'Silkscreen', monospace;
+}
 
 html {
   scroll-behavior: smooth;
@@ -6,5 +22,71 @@ html {
 
 body {
   margin: 0;
-  background: #020617;
+  background: var(--bg-deep);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--pixel-pink);
+  color: white;
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.pixel-grid {
+  background-image:
+    linear-gradient(rgba(16, 36, 107, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 36, 107, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.dark-pixel-grid {
+  background-image:
+    linear-gradient(rgba(53, 214, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 214, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.retro-panel {
+  border: 2px solid #101936;
+  box-shadow:
+    4px 4px 0 #101936,
+    inset 2px 2px 0 rgba(255, 255, 255, 0.75),
+    inset -2px -2px 0 rgba(16, 25, 54, 0.18);
+}
+
+.retro-panel-dark {
+  border: 2px solid rgba(53, 214, 255, 0.7);
+  box-shadow:
+    5px 5px 0 rgba(0, 0, 0, 0.5),
+    inset 2px 2px 0 rgba(255, 255, 255, 0.12),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.retro-window-bar {
+  background: linear-gradient(90deg, #123cbe, #071033);
+  color: white;
+  border-bottom: 2px solid #101936;
+}
+
+.scanline {
+  position: relative;
+}
+
+.scanline::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
 }

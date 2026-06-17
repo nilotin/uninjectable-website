@@ -3,53 +3,60 @@ import DashboardMockup from '../components/DashboardMockup'
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 pt-32 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.35),transparent_35%)]" />
-      <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
+    <section className="dark-pixel-grid relative overflow-hidden bg-[#071033] pt-36 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,79,163,0.18),transparent_32%),radial-gradient(circle_at_left,rgba(53,214,255,0.18),transparent_34%)]" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 pb-24 pt-10 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-24 pt-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="mb-5 inline-flex rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-200">
-            Runtime Governance for AI Workflows
-          </p>
+          <div className="mb-6 inline-flex items-center gap-3 border-2 border-[#35d6ff] bg-[#050a26] px-4 py-2 shadow-[4px_4px_0_#35d6ff]">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-[#7cff7a]" />
+            <span className="font-pixel text-xs text-[#7cff7a]">
+              SYSTEM STATUS: ONLINE
+            </span>
+          </div>
 
-          <h1 className="max-w-3xl text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            Runtime Governance for AI Agents
+          <h1 className="max-w-3xl text-5xl font-black uppercase leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
+            AI agents act.
+            <span className="block text-[#ff4fa3]">We show why.</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Monitor, risk-score, approve, or block AI actions before they impact
-            your business.
+          <p className="mt-6 max-w-2xl text-xl font-medium leading-8 text-[#dfe9ff]">
+            Uninjectable reveals the why behind every action your AI agent
+            takes. Trace, explain, approve, or block before business impact.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button href="#contact">Request a Demo</Button>
-            <Button href="#product" variant="secondary">
-              Explore the Platform
+            <Button href="#contact">Request Demo</Button>
+            <Button href="#product" variant="dark">
+              Try Live Demo
             </Button>
           </div>
 
-          <div className="mt-10 grid gap-4 text-sm text-slate-300 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="font-semibold text-white">Reduce AI risk</p>
-              <p className="mt-1 text-xs leading-5 text-slate-400">
-                Catch risky actions before execution.
-              </p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="retro-panel bg-[#edf4ff] p-4 text-slate-950">
+              <p className="font-pixel text-[10px] text-[#123cbe]">TRACE</p>
+              <p className="mt-2 text-sm font-bold">Every tool call.</p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="font-semibold text-white">Ensure control</p>
-              <p className="mt-1 text-xs leading-5 text-slate-400">
-                Route sensitive decisions to review.
-              </p>
+            <div className="retro-panel bg-[#edf4ff] p-4 text-slate-950">
+              <p className="font-pixel text-[10px] text-[#123cbe]">EXPLAIN</p>
+              <p className="mt-2 text-sm font-bold">Every risk reason.</p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="font-semibold text-white">Build trust</p>
-              <p className="mt-1 text-xs leading-5 text-slate-400">
-                Keep every action explainable.
-              </p>
+            <div className="retro-panel bg-[#edf4ff] p-4 text-slate-950">
+              <p className="font-pixel text-[10px] text-[#123cbe]">CONTROL</p>
+              <p className="mt-2 text-sm font-bold">Every AI action.</p>
             </div>
+          </div>
+
+          <div className="mt-8 border-l-4 border-[#ffd84d] bg-[#050a26]/70 p-5">
+            <p className="font-pixel text-xs text-[#ffd84d]">
+              TRUST BUT VERIFY.
+            </p>
+            <p className="mt-2 text-sm leading-6 text-slate-300">
+              AI agents can read, decide, and act across your systems. But can
+              your team explain why they did it?
+            </p>
           </div>
         </div>
 
