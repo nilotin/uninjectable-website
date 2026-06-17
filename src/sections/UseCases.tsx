@@ -4,7 +4,7 @@ import { useCases } from '../data/siteContent'
 
 function UseCases() {
   return (
-    <section className="bg-white px-6 py-24">
+    <section id="use-cases" className="bg-white px-6 py-24 scroll-mt-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Use cases"

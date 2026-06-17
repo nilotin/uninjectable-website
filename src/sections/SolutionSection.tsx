@@ -4,7 +4,7 @@ import { capabilities } from '../data/siteContent'
 
 function SolutionSection() {
   return (
-    <section className="bg-slate-50 px-6 py-24">
+    <section id="product" className="bg-slate-50 px-6 py-24 scroll-mt-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="The solution"

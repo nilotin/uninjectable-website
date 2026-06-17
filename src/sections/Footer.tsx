@@ -22,13 +22,13 @@ function Footer() {
             <h4 className="font-semibold text-white">Product</h4>
 
             <div className="mt-4 space-y-3 text-slate-400">
-              <a href="#" className="block hover:text-white">
+              <a href="#product" className="block hover:text-white">
                 Overview
               </a>
-              <a href="#" className="block hover:text-white">
+              <a href="#use-cases" className="block hover:text-white">
                 Use Cases
               </a>
-              <a href="#" className="block hover:text-white">
+              <a href="#how-it-works" className="block hover:text-white">
                 How It Works
               </a>
             </div>
@@ -38,14 +38,14 @@ function Footer() {
             <h4 className="font-semibold text-white">Company</h4>
 
             <div className="mt-4 space-y-3 text-slate-400">
-              <a href="#" className="block hover:text-white">
+              <a href="#team" className="block hover:text-white">
                 Team
               </a>
-              <a href="#" className="block hover:text-white">
+              <a href="#contact" className="block hover:text-white">
                 Contact
               </a>
-              <a href="#" className="block hover:text-white">
-                LinkedIn
+              <a href="#deployment" className="block hover:text-white">
+                Deployment
               </a>
             </div>
           </div>

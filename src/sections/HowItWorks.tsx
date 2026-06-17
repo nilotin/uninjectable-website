@@ -3,7 +3,7 @@ import { workflowSteps } from '../data/siteContent'
 
 function HowItWorks() {
   return (
-    <section className="bg-slate-950 px-6 py-24">
+    <section id="how-it-works" className="bg-slate-950 px-6 py-24 scroll-mt-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="How it works"

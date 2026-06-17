@@ -1,9 +1,24 @@
 export const navItems = [
-  'Product',
-  'Use Cases',
-  'How It Works',
-  'Team',
-  'Contact',
+  {
+    label: 'Product',
+    href: '#product',
+  },
+  {
+    label: 'Use Cases',
+    href: '#use-cases',
+  },
+  {
+    label: 'How It Works',
+    href: '#how-it-works',
+  },
+  {
+    label: 'Team',
+    href: '#team',
+  },
+  {
+    label: 'Contact',
+    href: '#contact',
+  },
 ]
 
 export const problems = [
@@ -131,5 +146,26 @@ export const differentiators = [
     title: 'Explainable audit trail',
     description:
       'Understand why an action was allowed, reviewed, or blocked with complete decision context.',
+  },
+]
+
+export const teamMembers = [
+  {
+    name: 'Yavuz Selim Yaşar',
+    role: 'CEO',
+    description:
+      'Leads company strategy, partnerships, customer discovery, and business development.',
+  },
+  {
+    name: 'Birdem Üstündağ',
+    role: 'CTO',
+    description:
+      'Leads product architecture, backend, SDK, risk engine, policy infrastructure, and technical validation.',
+  },
+  {
+    name: 'Nilsu Demirağ',
+    role: 'COO',
+    description:
+      'Leads operations, customer validation, project coordination, and pilot process management.',
   },
 ]

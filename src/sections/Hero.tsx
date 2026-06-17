@@ -21,8 +21,10 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button>Request a Demo</Button>
-            <Button variant="secondary">Explore the Platform</Button>
+            <Button href="#contact">Request a Demo</Button>
+            <Button href="#product" variant="secondary">
+                Explore the Platform
+            </Button>
           </div>
 
           <div className="mt-10 grid gap-4 text-sm text-slate-300 sm:grid-cols-3">

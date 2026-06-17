@@ -1,9 +1,18 @@
+import type { ReactNode } from 'react'
+
 type ButtonProps = {
-  children: React.ReactNode
+  children: ReactNode
   variant?: 'primary' | 'secondary'
+  href?: string
+  onClick?: () => void
 }
 
-function Button({ children, variant = 'primary' }: ButtonProps) {
+function Button({
+  children,
+  variant = 'primary',
+  href,
+  onClick,
+}: ButtonProps) {
   const baseClasses =
     'inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition'
 
@@ -14,8 +23,18 @@ function Button({ children, variant = 'primary' }: ButtonProps) {
       'border border-white/15 bg-white/5 text-white hover:bg-white/10',
   }
 
+  const className = `${baseClasses} ${variants[variant]}`
+
+  if (href) {
+    return (
+      <a href={href} className={className}>
+        {children}
+      </a>
+    )
+  }
+
   return (
-    <button className={`${baseClasses} ${variants[variant]}`}>
+    <button onClick={onClick} className={className}>
       {children}
     </button>
   )

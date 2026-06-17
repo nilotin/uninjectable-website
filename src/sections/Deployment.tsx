@@ -3,7 +3,7 @@ import { deploymentOptions, differentiators } from '../data/siteContent'
 
 function Deployment() {
   return (
-    <section className="bg-slate-50 px-6 py-24">
+    <section id="deployment" className="bg-slate-50 px-6 py-24 scroll-mt-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Deployment"

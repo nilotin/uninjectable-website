@@ -2,7 +2,7 @@ import Button from '../components/Button'
 
 function CTA() {
   return (
-    <section className="bg-white px-6 py-24">
+    <section id="contact" className="bg-white px-6 py-24 scroll-mt-24">
       <div className="mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-16 text-center text-white md:px-12">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.35),transparent_40%)]" />
@@ -22,7 +22,9 @@ function CTA() {
             </p>
 
             <div className="mt-8 flex justify-center">
-              <Button>Request a Discovery Call</Button>
+              <Button href="mailto:hello@uninjectable.com">
+                Request a Discovery Call
+              </Button>
             </div>
           </div>
         </div>
