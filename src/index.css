@@ -9,7 +9,7 @@
   --line: #d7e0ef;
   --accent-blue: #2563eb;
   --accent-cyan: #38bdf8;
-  --accent-pink: #ec4899;
+  --accent-pink: #ff4fa3;
   --accent-green: #22c55e;
   --accent-yellow: #f59e0b;
   --accent-red: #ef4444;
@@ -31,7 +31,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent-blue);
+  background: var(--accent-pink);
   color: white;
 }
 
@@ -39,6 +39,8 @@ body {
 .font-mono-accent {
   font-family: var(--font-mono);
 }
+
+/* Background grids */
 
 .subtle-grid {
   background-image:
@@ -53,6 +55,8 @@ body {
     linear-gradient(90deg, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
   background-size: 30px 30px;
 }
+
+/* Shared panels */
 
 .enterprise-panel {
   border: 1px solid rgba(148, 163, 184, 0.22);
@@ -74,6 +78,8 @@ body {
 .status-dot {
   box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
 }
+
+/* Angular pixel-enterprise cards */
 
 .pixel-card {
   position: relative;
@@ -98,11 +104,499 @@ body {
   width: 18px;
   height: 18px;
   background:
-    linear-gradient(135deg, transparent 0 45%, #94a3b8 45% 55%, transparent 55% 100%);
+    linear-gradient(
+      135deg,
+      transparent 0 45%,
+      #94a3b8 45% 55%,
+      transparent 55% 100%
+    );
   opacity: 0.45;
 }
 
 .pixel-mini-icon {
   border: 2px solid currentColor;
   box-shadow: 3px 3px 0 rgba(15, 23, 42, 0.18);
+}
+
+/* How It Works orbit */
+
+.orbit-stage {
+  position: relative;
+  min-height: 780px;
+}
+
+.orbit-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 65% 65%, rgba(148, 163, 184, 0.12), transparent 32%),
+    radial-gradient(circle, rgba(15, 27, 45, 0.96), rgba(2, 6, 23, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow:
+    0 0 55px rgba(15, 23, 42, 0.5),
+    inset 0 0 40px rgba(255, 255, 255, 0.04);
+}
+
+.orbit-core::before,
+.orbit-core::after {
+  content: '';
+  position: absolute;
+  inset: -34px;
+  border-radius: 999px;
+  border: 1px dashed rgba(148, 163, 184, 0.22);
+  animation: orbit-spin 22s linear infinite;
+}
+
+.orbit-core::after {
+  inset: -72px;
+  border-color: rgba(148, 163, 184, 0.14);
+  animation-duration: 34s;
+  animation-direction: reverse;
+}
+
+.orbit-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 760px;
+  height: 460px;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.orbit-ring::before {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border-radius: 999px;
+  border: 1px dashed rgba(148, 163, 184, 0.14);
+  animation: orbit-spin 38s linear infinite;
+}
+
+.orbit-card {
+  position: absolute;
+  width: 320px;
+  animation: orbit-float 6s ease-in-out infinite;
+}
+
+.orbit-card:nth-child(odd) {
+  animation-delay: -2s;
+}
+
+.orbit-card:nth-child(even) {
+  animation-delay: -4s;
+}
+
+.orbit-card-1 {
+  left: 5%;
+  top: 4%;
+}
+
+.orbit-card-2 {
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+}
+
+.orbit-card-3 {
+  right: 5%;
+  top: 4%;
+}
+
+.orbit-card-4 {
+  left: 5%;
+  bottom: 4%;
+}
+
+.orbit-card-5 {
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+}
+
+.orbit-card-6 {
+  right: 5%;
+  bottom: 4%;
+}
+
+/* Team sphere-belt carousel */
+
+.team-carousel-stage {
+  position: relative;
+  min-height: 680px;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+
+  --team-drag-side: 0px;
+  --team-drag-center: 0px;
+  --team-drag-rotate: 0deg;
+  --team-drag-center-rotate: 0deg;
+}
+
+.team-carousel-stage:active {
+  cursor: grabbing;
+}
+
+.team-carousel-sphere {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: min(92vw, 760px);
+  height: min(76vw, 520px);
+  min-height: 320px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.05), transparent 32%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.08), transparent 58%);
+  pointer-events: none;
+}
+
+.team-carousel-sphere::before {
+  content: '';
+  position: absolute;
+  inset: 32px 56px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow:
+    0 0 0 32px rgba(148, 163, 184, 0.035),
+    0 0 0 68px rgba(148, 163, 184, 0.028);
+}
+
+.team-carousel-sphere::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 48%,
+      rgba(148, 163, 184, 0.13) 49%,
+      transparent 51%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 49%,
+      rgba(148, 163, 184, 0.1) 50%,
+      transparent 51%
+    );
+}
+
+.team-carousel-line {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: min(112vw, 860px);
+  height: min(46vw, 250px);
+  min-height: 140px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  border-top: 2px solid rgba(255, 79, 163, 0.22);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  pointer-events: none;
+}
+
+.team-carousel-card {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: min(78vw, 370px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition:
+    transform 1120ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.team-carousel-card-surface {
+  opacity: 1;
+  filter: none;
+  transition:
+    opacity 1120ms ease,
+    filter 1120ms ease;
+  will-change: opacity, filter;
+}
+
+.team-carousel-stage.is-dragging .team-carousel-card {
+  transition: transform 90ms linear;
+}
+
+.team-carousel-stage.is-dragging .team-carousel-card-surface {
+  transition:
+    opacity 90ms linear,
+    filter 90ms linear;
+}
+
+/* Mobile/default positions */
+
+.team-carousel-card-left {
+  z-index: 20;
+  transform:
+    translate(calc(-118% + var(--team-drag-side)), -50%)
+    perspective(900px)
+    rotateY(calc(-38deg + var(--team-drag-rotate)))
+    scale(0.72);
+}
+
+.team-carousel-card-center {
+  z-index: 40;
+  opacity: 1;
+  filter: none;
+  transform:
+    translate(calc(-50% + var(--team-drag-center)), -50%)
+    perspective(900px)
+    rotateY(var(--team-drag-center-rotate))
+    scale(1);
+}
+
+.team-carousel-card-right {
+  z-index: 20;
+  transform:
+    translate(calc(18% + var(--team-drag-side)), -50%)
+    perspective(900px)
+    rotateY(calc(38deg + var(--team-drag-rotate)))
+    scale(0.72);
+}
+
+.team-carousel-card-left .team-carousel-card-surface,
+.team-carousel-card-right .team-carousel-card-surface {
+  opacity: 0.36;
+  filter: grayscale(1) saturate(0.25) brightness(0.78) contrast(0.9);
+}
+
+.team-carousel-card-center .team-carousel-card-surface {
+  opacity: 1;
+  filter: none;
+}
+
+.team-carousel-card-left img,
+.team-carousel-card-right img {
+  filter: grayscale(1) brightness(0.68) contrast(0.82);
+}
+
+.team-carousel-card .pixel-card {
+  min-height: 400px;
+  padding: 1.35rem;
+}
+
+.team-carousel-card .pixel-mini-icon {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+.team-carousel-card h3 {
+  font-size: 1.35rem;
+}
+
+.team-carousel-card p {
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+}
+
+.team-carousel-nav {
+  position: absolute;
+  left: 0;
+  top: 44%;
+  z-index: 80;
+  width: 100%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.team-carousel-nav-button {
+  pointer-events: auto;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 44px;
+  height: 44px;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.86);
+  color: #0f172a;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 rgba(15, 23, 42, 0.16);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.team-carousel-nav-button:hover {
+  border-color: rgba(255, 79, 163, 0.42);
+  background: rgba(255, 255, 255, 0.96);
+  color: #ff4fa3;
+  transform: translateY(-1px);
+}
+
+.team-carousel-nav-button-left {
+  left: 12px;
+}
+
+.team-carousel-nav-button-right {
+  right: 12px;
+}
+
+.team-carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .team-carousel-stage {
+    min-height: 720px;
+  }
+
+  .team-carousel-card {
+    width: min(54vw, 380px);
+  }
+
+  .team-carousel-card-left {
+    transform:
+      translate(calc(-132% + var(--team-drag-side)), -50%)
+      perspective(1000px)
+      rotateY(calc(-32deg + var(--team-drag-rotate)))
+      scale(0.8);
+  }
+
+  .team-carousel-card-right {
+    transform:
+      translate(calc(32% + var(--team-drag-side)), -50%)
+      perspective(1000px)
+      rotateY(calc(32deg + var(--team-drag-rotate)))
+      scale(0.8);
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+  .team-carousel-stage {
+    min-height: 760px;
+  }
+
+  .team-carousel-sphere,
+  .team-carousel-line,
+  .team-carousel-card {
+    top: 47%;
+  }
+
+  .team-carousel-card {
+    width: 370px;
+  }
+
+  .team-carousel-card-left {
+    transform:
+      translate(calc(-150% + var(--team-drag-side)), -50%)
+      perspective(1100px)
+      rotateY(calc(-28deg + var(--team-drag-rotate)))
+      scale(0.84);
+  }
+
+  .team-carousel-card-right {
+    transform:
+      translate(calc(50% + var(--team-drag-side)), -50%)
+      perspective(1100px)
+      rotateY(calc(28deg + var(--team-drag-rotate)))
+      scale(0.84);
+  }
+
+  .team-carousel-card .pixel-card {
+    min-height: 440px;
+    padding: 2rem;
+  }
+
+  .team-carousel-card .pixel-mini-icon {
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-carousel-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .team-carousel-card p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .team-carousel-nav {
+    top: 47%;
+  }
+
+  .team-carousel-nav-button {
+    min-width: 86px;
+    height: 48px;
+  }
+
+  .team-carousel-nav-button-left {
+    left: 28px;
+  }
+
+  .team-carousel-nav-button-right {
+    right: 28px;
+  }
+
+  .team-carousel-dots {
+    bottom: 100px;
+  }
+}
+
+/* Motion */
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-core::before,
+  .orbit-core::after,
+  .orbit-ring::before,
+  .orbit-card,
+  .team-carousel-card {
+    animation: none;
+    transition: none;
+  }
 }

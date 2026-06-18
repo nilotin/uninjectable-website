@@ -67,11 +67,11 @@ function HowItWorks() {
           variant="dark"
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 lg:hidden">
           {steps.map((step) => (
             <div key={step.number} className="pixel-card-dark bg-[#0f1b2d] p-6">
               <div className="mb-6 flex items-center justify-between gap-4">
-                <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-300">
+                <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-3 py-2 text-xs font-semibold text-[#ff4fa3]">
                   {step.number}
                 </span>
 
@@ -88,7 +88,54 @@ function HowItWorks() {
                 {step.description}
               </p>
 
-              <div className="mt-8 h-[6px] w-20 bg-cyan-300" />
+              <div className="mt-8 h-[6px] w-20 bg-[#ff4fa3]" />
+            </div>
+          ))}
+        </div>
+
+        <div className="orbit-stage mt-20 hidden lg:block">
+          <div className="orbit-ring" />
+
+          <div className="orbit-core flex items-center justify-center">
+            <div className="relative z-10 text-center">
+              <p className="font-mono-accent text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ff4fa3]">
+                Policy Core
+              </p>
+              <p className="mt-2 text-3xl font-extrabold text-white">
+                AI
+              </p>
+              <p className="font-mono-accent mt-2 text-[10px] uppercase tracking-[0.18em] text-cyan-300">
+                runtime layer
+              </p>
+            </div>
+          </div>
+
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className={`orbit-card orbit-card-${index + 1}`}
+            >
+              <div className="pixel-card-dark bg-[#0f1b2d] p-6">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-3 py-2 text-xs font-semibold text-[#ff4fa3]">
+                    {step.number}
+                  </span>
+
+                  <span className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                    {step.tag}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-extrabold leading-tight text-white">
+                  {step.title}
+                </h3>
+
+                <p className="mt-4 text-base leading-8 text-slate-300">
+                  {step.description}
+                </p>
+
+                <div className="mt-8 h-[6px] w-20 bg-[#ff4fa3]" />
+              </div>
             </div>
           ))}
         </div>
@@ -96,7 +143,7 @@ function HowItWorks() {
         <div className="pixel-card-dark mt-20 overflow-hidden bg-[#0b1424] text-white">
           <div className="console-bar flex items-center justify-between px-5 py-4">
             <div>
-              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#ff4fa3]">
                 Example incident flow
               </p>
               <h3 className="mt-1 text-lg font-semibold text-white">
@@ -112,7 +159,7 @@ function HowItWorks() {
           <div className="grid gap-8 p-6 md:p-8 lg:grid-cols-[1fr_0.85fr]">
             <div>
               <div className="pixel-card-dark bg-[#111c2d] p-6">
-                <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#ff4fa3]">
                   Decision chain
                 </p>
 
@@ -150,7 +197,7 @@ function HowItWorks() {
 
             <div className="pixel-card-dark bg-[#111c2d] p-6">
               <div className="mb-5 flex items-center justify-between">
-                <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#ff4fa3]">
                   Policy check
                 </p>
 

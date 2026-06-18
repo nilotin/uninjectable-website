@@ -24,7 +24,7 @@ function FeatureCard({
       <div
         className={`pixel-mini-icon mb-6 flex h-14 w-14 items-center justify-center text-sm font-semibold ${
           isDark
-            ? 'bg-cyan-300/10 text-cyan-300'
+            ? 'bg-[#ff4fa3]/10 text-[#ff4fa3]'
             : 'bg-slate-100 text-blue-700'
         }`}
       >
@@ -49,7 +49,7 @@ function FeatureCard({
 
       <div
         className={`mt-8 h-[6px] w-20 ${
-          isDark ? 'bg-cyan-300' : 'bg-blue-600'
+          isDark ? 'bg-[#ff4fa3]' : 'bg-blue-600'
         }`}
       />
     </div>
