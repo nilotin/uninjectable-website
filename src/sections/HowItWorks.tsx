@@ -1,4 +1,5 @@
 import SectionHeader from '../components/SectionHeader'
+import EyeCore from '../components/EyeCore'
 
 const steps = [
   {
@@ -96,19 +97,7 @@ function HowItWorks() {
         <div className="orbit-stage mt-20 hidden lg:block">
           <div className="orbit-ring" />
 
-          <div className="orbit-core flex items-center justify-center">
-            <div className="relative z-10 text-center">
-              <p className="font-mono-accent text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ff4fa3]">
-                Policy Core
-              </p>
-              <p className="mt-2 text-3xl font-extrabold text-white">
-                AI
-              </p>
-              <p className="font-mono-accent mt-2 text-[10px] uppercase tracking-[0.18em] text-cyan-300">
-                runtime layer
-              </p>
-            </div>
-          </div>
+          <EyeCore />
 
           {steps.map((step, index) => (
             <div
