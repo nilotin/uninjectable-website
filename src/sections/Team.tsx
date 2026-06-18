@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties, PointerEvent, WheelEvent } from 'react'
+import type { CSSProperties, PointerEvent } from 'react'
 import SectionHeader from '../components/SectionHeader'
 import { teamMembers } from '../data/siteContent'
 
@@ -20,10 +20,13 @@ type SnapshotCard = {
 
 type CarouselCard = TeamMemberCard | SnapshotCard
 
-type VisibleCard = {
-  slot: 'left' | 'center' | 'right'
-  card: CarouselCard
-}
+type CarouselSlot =
+  | 'far-left'
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'far-right'
+  | 'back'
 
 function Team() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -31,7 +34,9 @@ function Team() {
   const [teamPhotoLoaded, setTeamPhotoLoaded] = useState(true)
   const [dragOffset, setDragOffset] = useState(0)
 
+  const stageRef = useRef<HTMLDivElement | null>(null)
   const pointerStartX = useRef<number | null>(null)
+
   const pauseTimeoutRef = useRef<number | null>(null)
   const wheelAccumRef = useRef(0)
   const wheelLockRef = useRef(false)
@@ -58,23 +63,32 @@ function Team() {
     [],
   )
 
-  const previousIndex = (activeIndex - 1 + cards.length) % cards.length
-  const nextIndex = (activeIndex + 1) % cards.length
+  function getCircularOffset(cardIndex: number) {
+    let offset = cardIndex - activeIndex
+    const half = cards.length / 2
 
-  const visibleCards: VisibleCard[] = [
-    {
-      slot: 'left',
-      card: cards[previousIndex],
-    },
-    {
-      slot: 'center',
-      card: cards[activeIndex],
-    },
-    {
-      slot: 'right',
-      card: cards[nextIndex],
-    },
-  ]
+    if (offset > half) {
+      offset -= cards.length
+    }
+
+    if (offset < -half) {
+      offset += cards.length
+    }
+
+    return offset
+  }
+
+  function getCarouselSlot(cardIndex: number): CarouselSlot {
+    const offset = getCircularOffset(cardIndex)
+
+    if (offset === 0) return 'center'
+    if (offset === -1) return 'left'
+    if (offset === 1) return 'right'
+    if (offset === -2) return 'far-left'
+    if (offset === 2) return 'far-right'
+
+    return 'back'
+  }
 
   function nextCard() {
     setActiveIndex((current) => (current + 1) % cards.length)
@@ -94,6 +108,10 @@ function Team() {
     pauseTimeoutRef.current = window.setTimeout(() => {
       setIsPaused(false)
     }, 5200)
+  }
+
+  function stopCarouselDrag(event: PointerEvent<HTMLButtonElement>) {
+    event.stopPropagation()
   }
 
   function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
@@ -160,7 +178,7 @@ function Team() {
     setIsPaused(false)
   }
 
-  function handleWheel(event: WheelEvent<HTMLDivElement>) {
+  function handleNativeWheel(event: WheelEvent) {
     const horizontalDelta =
       Math.abs(event.deltaX) > Math.abs(event.deltaY)
         ? event.deltaX
@@ -171,15 +189,13 @@ function Team() {
     if (Math.abs(horizontalDelta) < 4) return
 
     event.preventDefault()
+    event.stopPropagation()
+
     setIsPaused(true)
 
     wheelAccumRef.current += horizontalDelta
 
-    const visualOffset = Math.max(
-      -90,
-      Math.min(90, -wheelAccumRef.current),
-    )
-
+    const visualOffset = Math.max(-90, Math.min(90, -wheelAccumRef.current))
     setDragOffset(visualOffset)
 
     if (wheelResetTimeoutRef.current) {
@@ -201,6 +217,7 @@ function Team() {
       wheelLockRef.current = true
       wheelAccumRef.current = 0
       setDragOffset(0)
+
       nextCard()
       pauseTemporarily()
 
@@ -213,6 +230,7 @@ function Team() {
       wheelLockRef.current = true
       wheelAccumRef.current = 0
       setDragOffset(0)
+
       previousCard()
       pauseTemporarily()
 
@@ -222,9 +240,41 @@ function Team() {
     }
   }
 
-  function stopCarouselDrag(event: PointerEvent<HTMLButtonElement>) {
-    event.stopPropagation()
-  }
+  useEffect(() => {
+    const wheelHandler = (event: WheelEvent) => {
+      const stageElement = stageRef.current
+
+      if (!stageElement) return
+      if (!(event.target instanceof Node)) return
+      if (!stageElement.contains(event.target)) return
+
+      const horizontalDelta =
+        Math.abs(event.deltaX) > Math.abs(event.deltaY)
+          ? event.deltaX
+          : event.shiftKey
+            ? event.deltaY
+            : 0
+
+      if (Math.abs(horizontalDelta) < 4) return
+
+      event.preventDefault()
+      event.stopPropagation()
+      event.stopImmediatePropagation()
+
+      handleNativeWheel(event)
+    }
+
+    window.addEventListener('wheel', wheelHandler, {
+      passive: false,
+      capture: true,
+    })
+
+    return () => {
+      window.removeEventListener('wheel', wheelHandler, {
+        capture: true,
+      })
+    }
+  }, [cards.length])
 
   useEffect(() => {
     if (isPaused) return
@@ -361,7 +411,7 @@ function Team() {
   return (
     <section
       id="team"
-      className="subtle-grid bg-[#eef3fb] px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-[#eef3fb] px-6 pt-0 pb-20 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -371,32 +421,37 @@ function Team() {
         />
 
         <div
-          className={`team-carousel-stage mt-14 ${
+          ref={stageRef}
+          className={`team-carousel-stage mt-0 ${
             dragOffset !== 0 ? 'is-dragging' : ''
           }`}
           style={carouselStyle}
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={handlePointerUp}
-            onPointerCancel={handlePointerCancel}
-            onPointerLeave={handlePointerLeave}
-            onWheel={handleWheel}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
+          onPointerLeave={handlePointerLeave}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
         >
           <div className="team-carousel-sphere" />
           <div className="team-carousel-line" />
 
-            {visibleCards.map(({ slot, card }) => (
+          {cards.map((card, index) => {
+            const slot = getCarouselSlot(index)
+
+            return (
               <div
                 key={getCardKey(card)}
                 className={`team-carousel-card team-carousel-card-${slot}`}
+                aria-hidden={slot === 'back'}
               >
                 <div className="team-carousel-card-surface">
                   {renderCard(card)}
                 </div>
               </div>
-            ))}
+            )
+          })}
 
           <div className="team-carousel-nav">
             <button

@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -28,6 +30,8 @@ body {
   background: var(--bg-deep);
   font-family: var(--font-body);
   color: var(--ink);
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 ::selection {
@@ -235,6 +239,8 @@ body {
   user-select: none;
   touch-action: pan-y;
   cursor: grab;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
 
   --team-drag-side: 0px;
   --team-drag-center: 0px;
@@ -249,7 +255,7 @@ body {
 .team-carousel-sphere {
   position: absolute;
   left: 50%;
-  top: 44%;
+  top: 40%;
   width: min(92vw, 760px);
   height: min(76vw, 520px);
   min-height: 320px;
@@ -296,7 +302,7 @@ body {
 .team-carousel-line {
   position: absolute;
   left: 50%;
-  top: 44%;
+  top: 40%;
   width: min(112vw, 860px);
   height: min(46vw, 250px);
   min-height: 140px;
@@ -309,13 +315,12 @@ body {
 
 .team-carousel-card {
   position: absolute;
-  top: 44%;
+  top: 40%;
   left: 50%;
   width: min(78vw, 370px);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition:
-    transform 1120ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 1180ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
 
@@ -323,8 +328,8 @@ body {
   opacity: 1;
   filter: none;
   transition:
-    opacity 1120ms ease,
-    filter 1120ms ease;
+    opacity 1180ms ease,
+    filter 1180ms ease;
   will-change: opacity, filter;
 }
 
@@ -338,7 +343,17 @@ body {
     filter 90ms linear;
 }
 
-/* Mobile/default positions */
+/* Mobile/default belt positions */
+
+.team-carousel-card-far-left {
+  z-index: 8;
+  pointer-events: none;
+  transform:
+    translate(calc(-178% + var(--team-drag-side)), -50%)
+    perspective(900px)
+    rotateY(calc(-62deg + var(--team-drag-rotate)))
+    scale(0.52);
+}
 
 .team-carousel-card-left {
   z-index: 20;
@@ -351,8 +366,6 @@ body {
 
 .team-carousel-card-center {
   z-index: 40;
-  opacity: 1;
-  filter: none;
   transform:
     translate(calc(-50% + var(--team-drag-center)), -50%)
     perspective(900px)
@@ -369,10 +382,24 @@ body {
     scale(0.72);
 }
 
-.team-carousel-card-left .team-carousel-card-surface,
-.team-carousel-card-right .team-carousel-card-surface {
-  opacity: 0.36;
-  filter: grayscale(1) saturate(0.25) brightness(0.78) contrast(0.9);
+.team-carousel-card-far-right {
+  z-index: 8;
+  pointer-events: none;
+  transform:
+    translate(calc(78% + var(--team-drag-side)), -50%)
+    perspective(900px)
+    rotateY(calc(62deg + var(--team-drag-rotate)))
+    scale(0.52);
+}
+
+.team-carousel-card-back {
+  z-index: 0;
+  pointer-events: none;
+  transform:
+    translate(-50%, -50%)
+    perspective(900px)
+    rotateY(80deg)
+    scale(0.44);
 }
 
 .team-carousel-card-center .team-carousel-card-surface {
@@ -380,8 +407,27 @@ body {
   filter: none;
 }
 
+.team-carousel-card-left .team-carousel-card-surface,
+.team-carousel-card-right .team-carousel-card-surface {
+  opacity: 0.34;
+  filter: grayscale(1) saturate(0.25) brightness(0.78) contrast(0.9);
+}
+
+.team-carousel-card-far-left .team-carousel-card-surface,
+.team-carousel-card-far-right .team-carousel-card-surface {
+  opacity: 0.08;
+  filter: grayscale(1) saturate(0.15) brightness(0.65) contrast(0.82);
+}
+
+.team-carousel-card-back .team-carousel-card-surface {
+  opacity: 0;
+  filter: grayscale(1) brightness(0.5);
+}
+
 .team-carousel-card-left img,
-.team-carousel-card-right img {
+.team-carousel-card-right img,
+.team-carousel-card-far-left img,
+.team-carousel-card-far-right img {
   filter: grayscale(1) brightness(0.68) contrast(0.82);
 }
 
@@ -479,6 +525,14 @@ body {
     width: min(54vw, 380px);
   }
 
+  .team-carousel-card-far-left {
+    transform:
+      translate(calc(-190% + var(--team-drag-side)), -50%)
+      perspective(1000px)
+      rotateY(calc(-58deg + var(--team-drag-rotate)))
+      scale(0.58);
+  }
+
   .team-carousel-card-left {
     transform:
       translate(calc(-132% + var(--team-drag-side)), -50%)
@@ -494,6 +548,14 @@ body {
       rotateY(calc(32deg + var(--team-drag-rotate)))
       scale(0.8);
   }
+
+  .team-carousel-card-far-right {
+    transform:
+      translate(calc(92% + var(--team-drag-side)), -50%)
+      perspective(1000px)
+      rotateY(calc(58deg + var(--team-drag-rotate)))
+      scale(0.58);
+  }
 }
 
 /* Desktop */
@@ -506,11 +568,19 @@ body {
   .team-carousel-sphere,
   .team-carousel-line,
   .team-carousel-card {
-    top: 47%;
+    top: 42%;
   }
 
   .team-carousel-card {
     width: 370px;
+  }
+
+  .team-carousel-card-far-left {
+    transform:
+      translate(calc(-225% + var(--team-drag-side)), -50%)
+      perspective(1100px)
+      rotateY(calc(-54deg + var(--team-drag-rotate)))
+      scale(0.62);
   }
 
   .team-carousel-card-left {
@@ -527,6 +597,14 @@ body {
       perspective(1100px)
       rotateY(calc(28deg + var(--team-drag-rotate)))
       scale(0.84);
+  }
+
+  .team-carousel-card-far-right {
+    transform:
+      translate(calc(125% + var(--team-drag-side)), -50%)
+      perspective(1100px)
+      rotateY(calc(54deg + var(--team-drag-rotate)))
+      scale(0.62);
   }
 
   .team-carousel-card .pixel-card {
@@ -567,7 +645,7 @@ body {
   }
 
   .team-carousel-dots {
-    bottom: 100px;
+    bottom: 90px;
   }
 }
 
