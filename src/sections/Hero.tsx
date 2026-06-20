@@ -8,8 +8,8 @@ function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 pb-24 pt-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2">
-            <span className="status-dot h-2 w-2 rounded-full bg-green-400" />
+          <div className="mb-6 inline-flex items-center gap-3 rounded-none border border-cyan-300/20 bg-cyan-300/10 px-4 py-2">
+            <span className="status-dot h-2 w-2 rounded-none bg-green-400" />
             <span className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
               Every action leaves a trail
             </span>
@@ -32,7 +32,7 @@ function Hero() {
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-none border border-white/10 bg-white/5 p-4">
               <p className="font-mono-accent text-xs uppercase tracking-[0.16em] text-cyan-300">
                 Trace
               </p>
@@ -41,7 +41,7 @@ function Hero() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-none border border-white/10 bg-white/5 p-4">
               <p className="font-mono-accent text-xs uppercase tracking-[0.16em] text-cyan-300">
                 Explain
               </p>
@@ -50,7 +50,7 @@ function Hero() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="rounded-none border border-white/10 bg-white/5 p-4">
               <p className="font-mono-accent text-xs uppercase tracking-[0.16em] text-cyan-300">
                 Control
               </p>

@@ -217,7 +217,7 @@ body {
 }
 
 .orbit-card-4 {
-  left: 5%;
+  right: 5%;
   bottom: 4%;
 }
 
@@ -228,7 +228,7 @@ body {
 }
 
 .orbit-card-6 {
-  right: 5%;
+  left: 5%;
   bottom: 4%;
 }
 
@@ -756,4 +756,116 @@ body {
     animation: none;
     transition: none;
   }
+}
+
+.orbit-flow-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.orbit-flow-path-glow {
+  fill: none;
+  stroke: rgba(255, 79, 163, 0.22);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: blur(5px);
+}
+
+.orbit-flow-path {
+  fill: none;
+  stroke: rgba(255, 79, 163, 0.68);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 10 10;
+  filter:
+    drop-shadow(0 0 7px rgba(255, 79, 163, 0.45))
+    drop-shadow(0 0 14px rgba(255, 79, 163, 0.2));
+  animation: orbit-flow-dash 16s linear infinite;
+}
+
+.orbit-flow-dot {
+  fill: #ff4fa3;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 79, 163, 0.85))
+    drop-shadow(0 0 16px rgba(255, 79, 163, 0.35));
+  offset-path: path(
+    'M 270 165 C 380 130, 465 130, 545 170 C 660 225, 775 165, 910 165 C 1080 170, 1095 430, 920 515 C 800 575, 660 570, 555 535 C 430 493, 325 505, 270 560'
+  );
+  animation: orbit-flow-dot-move 9s linear infinite;
+}
+
+.orbit-flow-dot-1 {
+  animation-delay: 0s;
+}
+
+.orbit-flow-dot-2 {
+  animation-delay: -3s;
+}
+
+.orbit-flow-dot-3 {
+  animation-delay: -6s;
+}
+
+@keyframes orbit-flow-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -220;
+  }
+}
+
+@keyframes orbit-flow-dot-move {
+  from {
+    offset-distance: 0%;
+  }
+
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/* Old-school file tab navbar */
+
+.file-tab-rail {
+  position: relative;
+  border-bottom: 2px solid rgba(255, 79, 163, 0.38);
+  filter: drop-shadow(0 0 16px rgba(255, 79, 163, 0.08));
+}
+
+.folder-tab {
+  position: relative;
+  border-radius: 0;
+  box-shadow:
+    3px 0 0 rgba(2, 6, 23, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.folder-tab::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: 2px;
+  background: rgba(255, 79, 163, 0.7);
+  opacity: 0.85;
+}
+
+.folder-tab::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(148, 163, 184, 0.18);
 }

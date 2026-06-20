@@ -54,10 +54,10 @@ const riskSignals = [
 function DashboardMockup() {
   return (
     <div className="relative">
-      <div className="absolute -inset-6 rounded-[2rem] bg-blue-600/20 blur-3xl" />
+      <div className="absolute -inset-6 rounded-none bg-blue-600/20 blur-3xl" />
 
-      <div className="enterprise-panel-dark relative overflow-hidden rounded-[2rem] bg-slate-900/90 p-3 backdrop-blur">
-        <div className="rounded-[1.5rem] border border-white/10 bg-slate-950">
+      <div className="enterprise-panel-dark relative overflow-hidden rounded-none bg-slate-900/90 p-3 backdrop-blur">
+        <div className="rounded-none border border-white/10 bg-slate-950">
           <div className="console-bar flex items-center justify-between px-5 py-4">
             <div>
               <p className="font-mono-accent text-xs uppercase tracking-[0.18em] text-cyan-300">
@@ -68,14 +68,14 @@ function DashboardMockup() {
               </h3>
             </div>
 
-            <div className="hidden items-center gap-2 rounded-full border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:flex">
-              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+            <div className="hidden items-center gap-2 rounded-none border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:flex">
+              <span className="h-1.5 w-1.5 rounded-none bg-green-400" />
               Live
             </div>
           </div>
 
           <div className="grid gap-4 p-5 lg:grid-cols-[1fr_0.85fr]">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+            <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
               <div className="mb-5 flex items-center justify-between">
                 <p className="text-sm font-medium text-slate-300">
                   Event Trace
@@ -103,7 +103,7 @@ function DashboardMockup() {
                     </div>
 
                     <span
-                      className={`rounded-full px-2 py-1 text-[10px] font-semibold uppercase ${event.tone}`}
+                      className={`rounded-none px-2 py-1 text-[10px] font-semibold uppercase ${event.tone}`}
                     >
                       {event.status}
                     </span>
@@ -113,7 +113,7 @@ function DashboardMockup() {
             </div>
 
             <div className="space-y-4">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
                 <p className="text-sm font-medium text-slate-300">
                   Risk Score
                 </p>
@@ -136,12 +136,12 @@ function DashboardMockup() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
                 <p className="text-sm font-medium text-slate-300">
                   Policy Decision
                 </p>
 
-                <div className="mt-4 rounded-xl border border-red-400/20 bg-red-400/10 p-4">
+                <div className="mt-4 rounded-none border border-red-400/20 bg-red-400/10 p-4">
                   <p className="font-mono-accent text-xs uppercase tracking-[0.16em] text-red-300">
                     Blocked
                   </p>
@@ -159,7 +159,7 @@ function DashboardMockup() {
               {riskSignals.map((signal) => (
                 <div
                   key={signal.label}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+                  className="rounded-none border border-white/10 bg-white/[0.04] p-4"
                 >
                   <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
                     {signal.label}
@@ -174,7 +174,7 @@ function DashboardMockup() {
         </div>
       </div>
 
-      <div className="absolute -bottom-5 left-6 hidden rounded-2xl border border-cyan-300/20 bg-slate-950/90 px-4 py-3 shadow-xl backdrop-blur md:block">
+      <div className="absolute -bottom-5 left-6 hidden rounded-none border border-cyan-300/20 bg-slate-950/90 px-4 py-3 shadow-xl backdrop-blur md:block">
         <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-cyan-300">
           Why-chain stored
         </p>

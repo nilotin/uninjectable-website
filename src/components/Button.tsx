@@ -14,7 +14,7 @@ function Button({
   onClick,
 }: ButtonProps) {
   const baseClasses =
-    'inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-slate-950'
+  'inline-flex items-center justify-center gap-2 rounded-none px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-slate-950'
 
   const variants = {
     primary:

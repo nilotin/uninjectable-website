@@ -4,9 +4,11 @@ function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-12 md:flex-row md:items-start md:justify-between">
         <div>
           <a href="#" className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-blue-200 bg-blue-50 text-sm font-bold text-blue-700">
-              U
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}uninjectable-logo-dark.png`}
+              alt="Uninjectable logo"
+              className="h-12 w-auto"
+            />
 
             <span className="text-lg font-bold">Uninjectable</span>
           </a>
