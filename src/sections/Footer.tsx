@@ -95,6 +95,27 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      <div className="footer-audit-ticker" aria-hidden="true">
+        <div className="footer-audit-track">
+          {[0, 1].map((group) => (
+            <div key={group} className="footer-audit-group">
+              <span>trace stored</span>
+              <span>·</span>
+              <span>policy evaluated</span>
+              <span>·</span>
+              <span>human review ready</span>
+              <span>·</span>
+              <span>audit trail preserved</span>
+              <span>·</span>
+              <span>risk score calculated</span>
+              <span>·</span>
+              <span>action controlled</span>
+              <span>·</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </footer>
   )
 }

@@ -14,19 +14,19 @@ function Deployment() {
           description="Use Uninjectable in the environment that matches your security, infrastructure, and data control requirements."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
           {deploymentOptions.map((option) => (
             <div
               key={option.title}
-              className="pixel-card bg-[#f8fbff] p-8 transition duration-200 hover:-translate-y-1"
+              className="group pixel-card flex h-full min-h-[430px] flex-col bg-[#f8fbff] p-8 text-slate-950 transition duration-200 hover:-translate-y-1"
             >
-              <div className="pixel-mini-icon mb-6 flex h-14 w-14 items-center justify-center bg-slate-100 text-blue-700">
+              <div className="pixel-mini-icon mb-8 flex h-14 w-14 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
                 <span className="font-mono-accent text-sm font-semibold">
                   {option.icon}
                 </span>
               </div>
 
-              <h3 className="text-[2rem] font-extrabold leading-tight tracking-tight text-slate-950">
+              <h3 className="min-h-[4.8rem] text-[2rem] font-extrabold leading-tight tracking-tight text-slate-950">
                 {option.title}
               </h3>
 
@@ -34,7 +34,9 @@ function Deployment() {
                 {option.description}
               </p>
 
-              <div className="mt-8 h-[6px] w-20 bg-blue-600" />
+              <div className="mt-auto pt-8">
+                <div className="h-[6px] w-20 bg-blue-600 transition duration-200 group-hover:bg-[#ff4fa3]" />
+              </div>
             </div>
           ))}
         </div>

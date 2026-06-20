@@ -1,5 +1,5 @@
 type SectionHeaderProps = {
-  eyebrow?: string
+  eyebrow: string
   title: string
   description?: string
   variant?: 'light' | 'dark'
@@ -14,30 +14,31 @@ function SectionHeader({
   const isDark = variant === 'dark'
 
   return (
-    <div className="mx-auto max-w-3xl text-center">
-      {eyebrow && (
-        <p
-          className={`font-mono-accent mb-4 text-xs font-semibold uppercase tracking-[0.2em] ${
-            isDark ? 'text-cyan-300' : 'text-blue-600'
-          }`}
-        >
-          {eyebrow}
-        </p>
-      )}
+    <div className="max-w-3xl">
+      <p
+        className={[
+          'terminal-eyebrow font-mono-accent text-[13px] font-semibold uppercase tracking-[0.22em]',
+          isDark ? 'text-[#ff4fa3]' : 'text-blue-600',
+        ].join(' ')}
+      >
+        <span>{eyebrow}</span>
+      </p>
 
       <h2
-        className={`text-3xl font-bold tracking-tight md:text-5xl ${
-          isDark ? 'text-white' : 'text-slate-950'
-        }`}
+        className={[
+          'mt-4 text-[2.65rem] font-extrabold leading-tight tracking-tight md:text-5xl',
+          isDark ? 'text-white' : 'text-slate-950',
+        ].join(' ')}
       >
         {title}
       </h2>
 
       {description && (
         <p
-          className={`mt-5 text-base leading-7 md:text-lg ${
-            isDark ? 'text-slate-300' : 'text-slate-600'
-          }`}
+          className={[
+            'mt-5 text-lg leading-8',
+            isDark ? 'text-slate-300' : 'text-slate-500',
+          ].join(' ')}
         >
           {description}
         </p>
