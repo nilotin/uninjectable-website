@@ -9,6 +9,7 @@ type TeamMemberCard = {
   role: string
   description: string
   image?: string
+  linkedin?: string
 }
 
 type SnapshotCard = {
@@ -52,6 +53,7 @@ function Team() {
         role: member.role,
         description: member.description,
         image: member.image,
+        linkedin: member.linkedin,
       })),
       {
         type: 'snapshot' as const,
@@ -347,9 +349,24 @@ function Team() {
         </p>
 
         <div className="mt-8 border-t border-slate-200 pt-5">
-          <span className="font-mono-accent text-xs text-slate-400">
-            LinkedIn profile
-          </span>
+          {card.linkedin ? (
+            <a
+              href={card.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              onPointerDown={(event) => event.stopPropagation()}
+              onPointerUp={(event) => event.stopPropagation()}
+              onClick={(event) => event.stopPropagation()}
+              className="font-mono-accent inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-blue-600 transition hover:text-[#ff4fa3]"
+            >
+              LinkedIn profile
+              <span aria-hidden="true">↗</span>
+            </a>
+          ) : (
+            <span className="font-mono-accent text-xs text-slate-400">
+              LinkedIn profile
+            </span>
+          )}
         </div>
       </div>
     )
