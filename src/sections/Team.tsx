@@ -8,6 +8,7 @@ type TeamMemberCard = {
   name: string
   role: string
   description: string
+  image?: string
 }
 
 type SnapshotCard = {
@@ -50,6 +51,7 @@ function Team() {
         name: member.name,
         role: member.role,
         description: member.description,
+        image: member.image,
       })),
       {
         type: 'snapshot' as const,
@@ -318,8 +320,18 @@ function Team() {
   function renderMemberCard(card: TeamMemberCard) {
     return (
       <div className="pixel-card bg-[#f8fbff] p-8 transition duration-200">
-        <div className="pixel-mini-icon mb-6 flex h-16 w-16 items-center justify-center bg-slate-100 text-blue-700">
-          <span className="text-lg font-bold">{getInitials(card.name)}</span>
+        <div className="mb-6 h-24 w-24 overflow-hidden border-2 border-slate-950 bg-slate-100 shadow-[4px_4px_0_rgba(15,23,42,0.18)]">
+          {card.image ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${card.image}`}
+            alt={card.name}
+            className="h-full w-full object-cover"
+          />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-blue-700">
+              <span className="text-lg font-bold">{getInitials(card.name)}</span>
+            </div>
+          )}
         </div>
 
         <h3 className="text-2xl font-extrabold leading-tight tracking-tight text-slate-950">
