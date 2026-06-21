@@ -289,7 +289,7 @@ export const teamMembers = [
     image: 'team/nilsu.png',
     linkedin: 'https://www.linkedin.com/in/nilsu-demirağ-62aa8925a/',
     description:
-      'Leads operations, customer validation, project coordination, and pilot process management.',
+      'Leads operations, customer validation, project coordination, pilot process management, and product design direction.',
   },
   {
     name: 'Cansın İsmail Bahçeci',
