@@ -145,9 +145,9 @@ function Navbar() {
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={[
-                    'folder-tab relative inline-flex min-w-[124px] items-center justify-center',
+                    'folder-tab relative inline-flex min-w-[112px] items-center justify-center',
                     'border-2 border-b-0 px-5 py-3',
-                    'font-mono-accent text-[12px] font-extrabold uppercase tracking-[0.1em]',
+                    'font-mono-accent text-[11px] font-extrabold uppercase tracking-[0.1em]',
                     'transition duration-150',
                     isActive
                       ? 'z-20 translate-y-[2px] border-[#ff4fa3]/80 bg-[#121f34] text-white shadow-[0_-4px_18px_rgba(255,79,163,0.16)]'
