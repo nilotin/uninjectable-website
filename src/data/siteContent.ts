@@ -11,25 +11,25 @@ export const problems = [
   {
     title: 'Lack of Visibility',
     description: "You can't secure or improve what you can't see.",
-    icon: '◉',
+    icon: 'problem-icons/visibility.png',
   },
   {
     title: 'Uncontrolled Actions',
     description:
       "AI agents can access tools, data, and workflows in ways teams didn't intend.",
-    icon: '⚠',
+    icon: 'problem-icons/actions.png',
   },
   {
     title: 'Weak Auditability',
     description:
       'Without clear traces, compliance, debugging, and forensics become difficult.',
-    icon: '⌁',
+    icon: 'problem-icons/auditability.png',
   },
   {
     title: 'Policy Gaps',
     description:
       'Generic monitoring tools do not understand action-level AI governance.',
-    icon: '◇',
+    icon: 'problem-icons/policy.png',
   },
 ]
 
@@ -38,25 +38,25 @@ export const capabilities = [
     title: 'Observe',
     description:
       'Capture agent events including source reads, retrievals, tool calls, action attempts, and outcomes.',
-    icon: '01',
+    icon: 'solution-icons/observe.png',
   },
   {
     title: 'Evaluate',
     description:
       'Score every action using policy rules, source trust, action type, and contextual risk signals.',
-    icon: '02',
+    icon: 'solution-icons/evaluate.png',
   },
   {
     title: 'Control',
     description:
       'Allow, review, or block AI actions using deterministic policy checks and human approval workflows.',
-    icon: '03',
+    icon: 'solution-icons/control.png',
   },
   {
     title: 'Explain',
     description:
       'Provide human-readable explanations and complete audit trails for every agent decision.',
-    icon: '04',
+    icon: 'solution-icons/explain.png',
   },
 ]
 
@@ -74,25 +74,25 @@ export const useCases = [
     title: 'Customer Support AI Agents',
     description:
       'Review refunds, credits, account changes, escalations, and customer-facing messages before execution.',
-    icon: 'CS',
+    icon: 'use-case-icons/support.png',
   },
   {
     title: 'IT / Cloud Operations',
     description:
       'Govern infrastructure changes, incident workflows, and operational commands triggered by AI agents.',
-    icon: 'IT',
+    icon: 'use-case-icons/cloud.png',
   },
   {
     title: 'Security Operations',
     description:
       'Add approval and traceability to AI-assisted triage, alert handling, and response workflows.',
-    icon: 'SO',
+    icon: 'use-case-icons/security.png',
   },
   {
     title: 'Internal Workflow Agents',
     description:
       'Control agents that update CRM records, send emails, modify tickets, or interact with internal tools.',
-    icon: 'WF',
+    icon: 'use-case-icons/workflow.png',
   },
 ]
 
@@ -232,19 +232,19 @@ export const deploymentOptions = [
     title: 'Uninjectable Cloud',
     description:
       'A managed platform for teams that want fast onboarding, automatic updates, and minimal infrastructure work.',
-    icon: '☁',
+    icon: 'deployment-icons/cloud.png',
   },
   {
     title: 'Private Cloud',
     description:
       'A dedicated environment for organizations that require stronger isolation and enterprise deployment control.',
-    icon: '◇',
+    icon: 'deployment-icons/private-cloud.png',
   },
   {
     title: 'On-Prem / Self-Hosted',
     description:
       'For regulated teams that need to keep infrastructure, data, and governance workflows inside their own environment.',
-    icon: '▣',
+    icon: 'deployment-icons/server.png',
   },
 ]
 

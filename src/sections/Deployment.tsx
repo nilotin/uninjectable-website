@@ -20,10 +20,13 @@ function Deployment() {
               key={option.title}
               className="group pixel-card flex h-full min-h-[430px] flex-col bg-[#f8fbff] p-8 text-slate-950 transition duration-200 hover:-translate-y-1"
             >
-              <div className="pixel-mini-icon mb-8 flex h-14 w-14 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
-                <span className="font-mono-accent text-sm font-semibold">
-                  {option.icon}
-                </span>
+              <div className="pixel-mini-icon mb-8 flex h-16 w-16 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
+                <img
+                  src={`${import.meta.env.BASE_URL}${option.icon}`}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
 
               <h3 className="min-h-[4.8rem] text-[2rem] font-extrabold leading-tight tracking-tight text-slate-950">

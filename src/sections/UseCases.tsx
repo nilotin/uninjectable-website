@@ -20,10 +20,13 @@ function UseCases() {
               key={useCase.title}
               className="use-case-trace-card group pixel-card flex h-full min-h-[520px] flex-col bg-[#f8fbff] p-6 text-slate-950 transition duration-200 hover:-translate-y-1"
             >
-              <div className="pixel-mini-icon mb-8 flex h-14 w-14 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
-                <span className="font-mono-accent text-sm font-semibold">
-                  {useCase.icon}
-                </span>
+              <div className="pixel-mini-icon mb-8 flex h-16 w-16 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
+                <img
+                  src={`${import.meta.env.BASE_URL}${useCase.icon}`}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
 
               <h3 className="min-h-[6.3rem] text-[1.65rem] font-extrabold uppercase leading-tight tracking-tight text-slate-950">

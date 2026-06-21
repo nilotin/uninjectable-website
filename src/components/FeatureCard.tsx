@@ -13,6 +13,8 @@ function FeatureCard({
 }: FeatureCardProps) {
   const isDark = variant === 'dark'
 
+  const isImageIcon = /\.(png|jpg|jpeg|svg|webp)$/i.test(icon)
+
   return (
     <div
       className={`group p-6 transition duration-200 hover:-translate-y-1 ${
@@ -22,13 +24,24 @@ function FeatureCard({
       }`}
     >
       <div
-        className={`pixel-mini-icon mb-6 flex h-14 w-14 items-center justify-center text-sm font-semibold ${
+        className={`pixel-mini-icon mb-6 flex h-16 w-16 items-center justify-center overflow-hidden ${
           isDark
             ? 'bg-[#ff4fa3]/10 text-[#ff4fa3]'
             : 'bg-slate-100 text-blue-700'
         }`}
       >
-        <span className="font-mono-accent">{icon}</span>
+        {isImageIcon ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${icon}`}
+            alt=""
+            aria-hidden="true"
+            className="h-12 w-12 object-contain"
+          />
+        ) : (
+          <span className="font-mono-accent text-sm font-semibold">
+            {icon}
+          </span>
+        )}
       </div>
 
       <h3
