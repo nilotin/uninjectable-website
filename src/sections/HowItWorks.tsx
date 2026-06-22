@@ -68,6 +68,117 @@ function HowItWorks() {
           variant="dark"
         />
 
+                <div className="mt-14 grid gap-5 lg:hidden">
+          {steps.map((step) => (
+            <div key={step.number} className="pixel-card-dark bg-[#0f1b2d] p-6">
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-3 py-2 text-xs font-semibold text-[#ff4fa3]">
+                  {step.number}
+                </span>
+
+                <span className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                  {step.tag}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-extrabold leading-tight text-white">
+                {step.title}
+              </h3>
+
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                {step.description}
+              </p>
+
+              <div className="mt-8 h-[6px] w-20 bg-[#ff4fa3]" />
+            </div>
+          ))}
+        </div>
+
+        <div className="orbit-stage mt-20 hidden lg:block">
+          <div className="orbit-ring" />
+
+                   <svg
+            className="orbit-flow-line"
+            viewBox="0 0 1200 760"
+            aria-hidden="true"
+          >
+            <defs>
+              <marker
+                id="orbit-flow-arrow"
+                markerWidth="10"
+                markerHeight="10"
+                refX="8"
+                refY="5"
+                orient="auto"
+              >
+                <path
+                  d="M0 0 L10 5 L0 10 Z"
+                  fill="rgba(255, 79, 163, 0.72)"
+                />
+              </marker>
+            </defs>
+
+            <path
+              className="orbit-flow-path-glow"
+              d="
+                M 270 165
+                C 380 130, 465 130, 545 170
+                C 660 225, 775 165, 910 165
+                C 1080 170, 1095 430, 920 515
+                C 800 575, 660 570, 555 535
+                C 430 493, 325 505, 270 560
+              "
+            />
+
+            <path
+              className="orbit-flow-path"
+              d="
+                M 270 165
+                C 380 130, 465 130, 545 170
+                C 660 225, 775 165, 910 165
+                C 1080 170, 1095 430, 920 515
+                C 800 575, 660 570, 555 535
+                C 430 493, 325 505, 270 560
+              "
+            />
+
+            <circle className="orbit-flow-dot orbit-flow-dot-1" r="4" />
+            <circle className="orbit-flow-dot orbit-flow-dot-2" r="4" />
+            <circle className="orbit-flow-dot orbit-flow-dot-3" r="4" />
+          </svg>
+
+          <EyeCore />
+
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className={`orbit-card orbit-card-${index + 1}`}
+            >
+              <div className="pixel-card-dark bg-[#0f1b2d] p-6">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-3 py-2 text-xs font-semibold text-[#ff4fa3]">
+                    {step.number}
+                  </span>
+
+                  <span className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                    {step.tag}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-extrabold leading-tight text-white">
+                  {step.title}
+                </h3>
+
+                <p className="mt-4 text-base leading-8 text-slate-300">
+                  {step.description}
+                </p>
+
+                <div className="mt-8 h-[6px] w-20 bg-[#ff4fa3]" />
+              </div>
+            </div>
+          ))}
+        </div>
+
       <div className="pixel-card-dark mt-12 overflow-hidden bg-[#0b1424] text-white md:mt-20">
         <div className="console-bar flex items-center justify-between px-5 py-4">
           <div>
