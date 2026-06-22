@@ -5,7 +5,7 @@ function UseCases() {
   return (
     <section
       id="use-cases"
-      className="subtle-grid bg-white px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-white px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -14,11 +14,11 @@ function UseCases() {
           description="Uninjectable is designed for teams moving AI agents from simple chat interfaces into real operational environments."
         />
 
-        <div className="mt-14 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid w-full min-w-0 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4">
           {useCases.map((useCase) => (
             <div
               key={useCase.title}
-              className="use-case-trace-card group pixel-card flex h-full min-h-[520px] flex-col bg-[#f8fbff] p-6 text-slate-950 transition duration-200 hover:-translate-y-1"
+              className="use-case-trace-card group pixel-card flex h-full min-h-[360px] w-full min-w-0 flex-col overflow-hidden bg-[#f8fbff] p-6 text-slate-950 transition duration-200 hover:-translate-y-1 sm:p-8 lg:min-h-[520px] lg:p-6"
             >
               <div className="pixel-mini-icon mb-8 flex h-16 w-16 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
                 <img
@@ -29,11 +29,11 @@ function UseCases() {
                 />
               </div>
 
-              <h3 className="min-h-[6.3rem] text-[1.65rem] font-extrabold uppercase leading-tight tracking-tight text-slate-950">
+              <h3 className="max-w-full break-words text-[1.55rem] font-extrabold uppercase leading-[1.08] tracking-tight text-slate-950 sm:text-[1.85rem] lg:min-h-[6.3rem] lg:text-[1.65rem]">
                 {useCase.title}
               </h3>
 
-              <p className="mt-5 text-base leading-8 text-slate-500">
+              <p className="mt-5 max-w-full break-words text-base leading-8 text-slate-500">
                 {useCase.description}
               </p>
 

@@ -440,7 +440,7 @@ function Team() {
   return (
     <section
       id="team"
-      className="subtle-grid bg-[#eef3fb] px-6 pt-0 pb-20 scroll-mt-24"
+      className="subtle-grid bg-[#eef3fb] px-4 pt-0 pb-16 scroll-mt-24 sm:px-6 md:pb-20"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

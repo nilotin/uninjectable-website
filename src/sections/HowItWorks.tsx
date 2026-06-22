@@ -58,7 +58,7 @@ function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="dark-subtle-grid bg-slate-950 px-6 py-24 scroll-mt-24"
+      className="dark-subtle-grid bg-slate-950 px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

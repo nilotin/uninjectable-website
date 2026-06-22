@@ -98,132 +98,52 @@ export const useCases = [
 
 export const productModules = [
   {
-    title: 'Shadow Agent Discovery',
-    shortTitle: 'Shadow Discovery',
-    code: 'SAD',
-    category: 'Visibility',
-    description:
-      'Makes AI agents, automations, tool usage flows, and uncontrolled agent behavior visible across the organization.',
-  },
-  {
     title: 'Agent Studio',
     shortTitle: 'Agent Studio',
     code: 'AS',
-    category: 'Build',
+    category: 'builder',
     description:
-      'Provides secure templates, scaffold structures, and governance-ready starting flows for enterprise agent use cases.',
+      'Provides secure templates, scaffolds, and governance-ready starting points for enterprise AI agent use cases.',
   },
   {
-    title: 'Runtime Policy Engine',
-    shortTitle: 'Policy Engine',
-    code: 'RPE',
-    category: 'Control',
+    title: 'Shadow Agent Discovery',
+    shortTitle: 'Shadow Discovery',
+    code: 'SAD',
+    category: 'visibility',
     description:
-      'Evaluates agent actions in real time through deterministic policy rules and produces allow, review, or block decisions.',
+      'Discovers AI agents, automations, tool usage flows, and uncontrolled agent behaviors across the organization.',
   },
   {
-    title: 'Why Chain',
+    title: 'Rich Why Chain',
     shortTitle: 'Why Chain',
-    code: 'WC',
-    category: 'Explainability',
+    code: 'RWC',
+    category: 'explainability',
     description:
-      'Creates a traceable decision chain that explains why each risk score, policy decision, and agent action occurred.',
+      'Explains why each risk score, policy decision, and agent action occurred through a traceable decision chain.',
   },
   {
-    title: 'Deterministic DLP',
-    shortTitle: 'DLP',
-    code: 'DLP',
-    category: 'Security',
+    title: 'Adaptive Smart Policy Engine',
+    shortTitle: 'Smart Policy',
+    code: 'ASPE',
+    category: 'policy',
     description:
-      'Detects sensitive data leakage risks through deterministic controls and monitors PII, customer data, financial data, and confidential content flows.',
+      'Evaluates agent actions with deterministic rules, learns from review outcomes, and suggests safer policy improvements over time.',
   },
   {
-    title: 'Usage & Cost Observability',
-    shortTitle: 'Usage Observability',
-    code: 'UCO',
-    category: 'Observability',
+    title: 'Token Usage Control',
+    shortTitle: 'Token Control',
+    code: 'TUC',
+    category: 'cost control',
     description:
-      'Makes agent usage volume, tool calls, action counts, and cost impact visible across teams and workflows.',
+      'Tracks token usage by agent, team, workflow, or customer and enforces limits before cost or usage overruns occur.',
   },
   {
-    title: 'Usage Budgets',
-    shortTitle: 'Usage Budgets',
-    code: 'UB',
-    category: 'Cost Control',
+    title: 'Omnichannel Action Integrations',
+    shortTitle: 'Omnichannel',
+    code: 'OAI',
+    category: 'integration',
     description:
-      'Defines usage limits by agent, team, customer, or workflow and helps control budget overrun risks early.',
-  },
-  {
-    title: 'Notification Outbox',
-    shortTitle: 'Notification Outbox',
-    code: 'NO',
-    category: 'Alerts',
-    description:
-      'Provides a centralized notification queue for risky actions, policy violations, review-required events, and system alerts.',
-  },
-  {
-    title: 'Channel Configuration',
-    shortTitle: 'Channels',
-    code: 'CC',
-    category: 'Configuration',
-    description:
-      'Enables notification channels such as Slack, email, webhook, or dashboard to be configured according to enterprise needs.',
-  },
-  {
-    title: 'Run Ledger',
-    shortTitle: 'Run Ledger',
-    code: 'RL',
-    category: 'Audit',
-    description:
-      'Maintains an auditable ledger of agent sessions, tool calls, action attempts, action results, and approval flows.',
-  },
-  {
-    title: 'Soft Undo Receipts',
-    shortTitle: 'Undo Receipts',
-    code: 'SUR',
-    category: 'Safety',
-    description:
-      'Generates undo receipts for reversible or compensable agent actions, supporting operational safety and accountability.',
-  },
-  {
-    title: 'Adaptive Policy Learning',
-    shortTitle: 'Policy Learning',
-    code: 'APL',
-    category: 'Improvement',
-    description:
-      'Uses policy decisions, review outcomes, and human approvals to support continuous improvement of governance rules over time.',
-  },
-  {
-    title: 'MCP Governance Posture',
-    shortTitle: 'MCP Posture',
-    code: 'MCP',
-    category: 'Posture',
-    description:
-      'Assesses MCP servers, tools, and connectors from the perspective of security, access, data flow, and policy compliance.',
-  },
-  {
-    title: 'Red-Team Scenario Validation',
-    shortTitle: 'Red-Team Validation',
-    code: 'RTV',
-    category: 'Validation',
-    description:
-      'Tests agent security against scenarios such as prompt injection, data exfiltration, unauthorized actions, and policy bypass attempts.',
-  },
-  {
-    title: 'Dashboard & Control Center',
-    shortTitle: 'Control Center',
-    code: 'DCC',
-    category: 'Dashboard',
-    description:
-      'Provides a centralized control panel for risk scores, agent activity, policy decisions, usage metrics, and review workflows.',
-  },
-  {
-    title: 'Broker Pilot Hardening',
-    shortTitle: 'Pilot Hardening',
-    code: 'BPH',
-    category: 'Pilot',
-    description:
-      'Strengthens logging, policy tuning, review flows, and production-readiness controls for real-world pilot customer scenarios.',
+      'Connects governed agent actions to communication channels such as WhatsApp, SMS, and email while keeping approvals and audit trails visible.',
   },
 ]
 

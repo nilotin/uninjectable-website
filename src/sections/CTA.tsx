@@ -4,7 +4,7 @@ function CTA() {
   return (
     <section
       id="contact"
-      className="dark-subtle-grid bg-slate-950 px-6 py-24 scroll-mt-24"
+      className="dark-subtle-grid bg-slate-950 px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="pixel-card-dark bg-[#08111f] p-8 text-white md:p-12">

@@ -5,7 +5,7 @@ function Deployment() {
   return (
     <section
       id="deployment"
-      className="subtle-grid bg-[#eef3fb] px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-[#eef3fb] px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

@@ -26,7 +26,7 @@ function SectionHeader({
 
       <h2
         className={[
-          'mt-4 text-[2.65rem] font-extrabold leading-tight tracking-tight md:text-5xl',
+          'mt-4 text-[2.25rem] font-extrabold leading-[1.05] tracking-tight sm:text-[2.65rem] md:text-5xl',
           isDark ? 'text-white' : 'text-slate-950',
         ].join(' ')}
       >

@@ -15,7 +15,7 @@ function ProblemSection() {
   return (
     <section
       id="product"
-      className="subtle-grid bg-[#eef3fb] px-6 py-24 scroll-mt-24"
+      className="subtle-grid bg-[#eef3fb] px-4 py-16 sm:px-6 md:py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -24,7 +24,7 @@ function ProblemSection() {
           description="AI agents are starting to read data, call tools, update systems, send messages, and trigger business workflows. But most teams still lack visibility and control over these actions."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {problems.map((problem) => {
             const isFlipped = flippedCards[problem.title]
 
