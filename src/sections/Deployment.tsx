@@ -14,13 +14,14 @@ function Deployment() {
           description="Use Uninjectable in the environment that matches your security, infrastructure, and data control requirements."
         />
 
-        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
-          {deploymentOptions.map((option) => (
+        <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
+          {deploymentOptions.map((option, index) => (
             <div
               key={option.title}
-              className="group pixel-card flex h-full min-h-[430px] flex-col bg-[#f8fbff] p-8 text-slate-950 transition duration-200 hover:-translate-y-1"
-            >
-              <div className="pixel-mini-icon mb-8 flex h-16 w-16 shrink-0 items-center justify-center bg-slate-100 text-blue-700">
+              className={`pixel-card bg-[#f8fbff] p-4 transition duration-200 hover:-translate-y-1 md:p-8 ${
+              index === 2 ? 'col-span-2 mx-auto w-1/2 min-w-[170px] lg:col-span-1 lg:w-auto lg:min-w-0' : ''
+            }`} >
+              <div className="pixel-mini-icon mb-5 flex h-14 w-14 items-center justify-center bg-slate-100 text-blue-700 md:mb-6">
                 <img
                   src={`${import.meta.env.BASE_URL}${option.icon}`}
                   alt=""
@@ -29,11 +30,11 @@ function Deployment() {
                 />
               </div>
 
-              <h3 className="min-h-[4.8rem] text-[2rem] font-extrabold leading-tight tracking-tight text-slate-950">
+              <h3 className="text-[1.25rem] font-extrabold leading-tight tracking-tight text-slate-950 md:text-[2rem]">
                 {option.title}
               </h3>
 
-              <p className="mt-5 text-lg leading-8 text-slate-500">
+              <p className="mt-4 text-[0.85rem] leading-6 text-slate-500 md:mt-5 md:text-lg md:leading-8">
                 {option.description}
               </p>
 
@@ -60,17 +61,17 @@ function Deployment() {
             </span>
           </div>
 
-          <div className="grid gap-10 p-8 md:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div className="grid gap-8 p-5 md:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
               <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
                 Not another chatbot dashboard
               </p>
 
-              <h3 className="mt-4 text-6xl font-extrabold leading-[0.95] tracking-tight text-white">
+              <h3 className="mt-4 text-[2.5rem] font-extrabold leading-[1] tracking-tight text-white md:text-6xl">
                 Built for real agent workflows.
               </h3>
 
-              <p className="mt-6 text-lg leading-8 text-slate-300">
+              <p className="mt-6 text-base leading-7 text-slate-300 md:text-lg md:leading-8">
                 Uninjectable is a runtime control layer designed specifically
                 for AI agent actions, policies, approvals, and auditability.
               </p>
@@ -80,13 +81,13 @@ function Deployment() {
               {differentiators.map((item) => (
                 <div
                   key={item.title}
-                  className="pixel-card-dark bg-[#111c2d] p-5"
+                  className="pixel-card-dark bg-[#111c2d] p-4 md:p-5"
                 >
-                  <h4 className="text-2xl font-extrabold leading-tight text-white">
+                  <h4 className="text-[1.25rem] font-extrabold leading-tight text-white md:text-2xl">
                     {item.title}
                   </h4>
 
-                  <p className="mt-3 text-base leading-8 text-slate-300">
+                  <p className="mt-3 text-[0.9rem] leading-6 text-slate-300 md:text-base md:leading-8">
                     {item.description}
                   </p>
                 </div>

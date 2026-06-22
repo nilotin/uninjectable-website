@@ -14,11 +14,11 @@ function CTA() {
                 Make autonomous AI accountable
               </p>
 
-              <h2 className="mt-4 max-w-4xl text-6xl font-extrabold leading-[0.95] tracking-tight">
+              <h2 className="mt-5 text-[2.65rem] font-extrabold leading-[1] tracking-tight text-white md:text-7xl">
                 Building AI agents for real business operations?
               </h2>
 
-              <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-300">
+              <p className="mt-6 text-base leading-7 text-slate-300 md:text-xl md:leading-9">
                 Let’s make them observable, controllable, and accountable before
                 they impact your customers, systems, or operations.
               </p>

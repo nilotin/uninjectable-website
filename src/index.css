@@ -616,6 +616,46 @@ body {
   transform: translateX(-50%);
 }
 
+/* Mobile */
+
+@media (max-width: 767px) {
+  .team-carousel-stage {
+    min-height: 700px;
+    margin-bottom: 0;
+  }
+
+  .team-carousel-card {
+    top: 48%;
+  }
+
+  .team-carousel-dots {
+    margin-top: 0.75rem;
+  }
+
+  .team-mobile-compact .team-carousel-stage {
+    min-height: 560px;
+    margin-top: 1rem;
+    overflow: visible;
+  }
+
+  .team-mobile-compact .team-carousel-card {
+    top: 44%;
+  }
+
+  .team-mobile-compact .team-carousel-dots {
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    bottom: 0.5rem;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
+
+  .team-mobile-compact .team-carousel-nav {
+    display: none;
+  }
+}
+
 /* Tablet */
 
 @media (min-width: 768px) {
@@ -944,11 +984,10 @@ body {
 
 @keyframes use-case-trace-marquee {
   from {
-    transform: translateX(-50%);
-  }
-
-  to {
     transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -988,18 +1027,41 @@ body {
 /* Footer audit ticker */
 
 .footer-audit-ticker {
+  position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 79, 163, 0.24);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-  background:
-    linear-gradient(90deg, rgba(255, 79, 163, 0.08), transparent 30%, rgba(37, 99, 235, 0.08)),
-    #050816;
-  mask-image: linear-gradient(
+  border-top: 1px solid rgba(255, 79, 163, 0.18);
+  border-bottom: 1px solid rgba(103, 232, 249, 0.12);
+  background: #050816;
+}
+
+.footer-audit-ticker::before,
+.footer-audit-ticker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 42px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.footer-audit-ticker::before {
+  left: 0;
+  background: linear-gradient(
     90deg,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
+    #050816 0%,
+    rgba(5, 8, 22, 0.92) 35%,
+    rgba(5, 8, 22, 0) 100%
+  );
+}
+
+.footer-audit-ticker::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    #050816 0%,
+    rgba(5, 8, 22, 0.92) 35%,
+    rgba(5, 8, 22, 0) 100%
   );
 }
 
@@ -1034,11 +1096,10 @@ body {
 
 @keyframes footer-audit-marquee {
   from {
-    transform: translateX(-50%);
-  }
-
-  to {
     transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -2102,6 +2163,10 @@ button.module-window-control {
   }
 
   .problem-flip-front h3 {
+    margin-top: 1.1rem;
+  }
+
+  .problem-flip-back h3 {
     margin-top: 1.1rem;
   }
 

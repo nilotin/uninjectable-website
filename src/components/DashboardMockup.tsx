@@ -37,33 +37,24 @@ const traceEvents = [
 ]
 
 const riskSignals = [
-  {
-    label: 'Source trust',
-    value: 'Low',
-  },
-  {
-    label: 'Action type',
-    value: 'Financial',
-  },
-  {
-    label: 'Policy',
-    value: 'High-risk refund',
-  },
+  { label: 'Source trust', value: 'Low' },
+  { label: 'Action type', value: 'Financial' },
+  { label: 'Policy', value: 'High-risk refund' },
 ]
 
 function DashboardMockup() {
   return (
     <div className="relative">
-      <div className="absolute -inset-6 rounded-none bg-blue-600/20 blur-3xl" />
+      <div className="absolute -inset-4 rounded-none bg-blue-600/20 blur-3xl md:-inset-6" />
 
-      <div className="enterprise-panel-dark relative overflow-hidden rounded-none bg-slate-900/90 p-3 backdrop-blur">
+      <div className="enterprise-panel-dark relative overflow-hidden rounded-none bg-slate-900/90 p-2 backdrop-blur md:p-3">
         <div className="rounded-none border border-white/10 bg-slate-950">
-          <div className="console-bar flex items-center justify-between px-5 py-4">
+          <div className="console-bar flex items-center justify-between px-4 py-3 md:px-5 md:py-4">
             <div>
-              <p className="font-mono-accent text-xs uppercase tracking-[0.18em] text-cyan-300">
+              <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-cyan-300 md:text-xs md:tracking-[0.18em]">
                 Live action trace
               </p>
-              <h3 className="mt-1 text-lg font-semibold text-white">
+              <h3 className="mt-1 text-base font-semibold text-white md:text-lg">
                 Agent Action Overview
               </h3>
             </div>
@@ -74,22 +65,22 @@ function DashboardMockup() {
             </div>
           </div>
 
-          <div className="grid gap-4 p-5 lg:grid-cols-[1fr_0.85fr]">
-            <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
-              <div className="mb-5 flex items-center justify-between">
-                <p className="text-sm font-medium text-slate-300">
+          <div className="grid gap-3 p-3 md:gap-4 md:p-5 lg:grid-cols-[1fr_0.85fr]">
+            <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+              <div className="mb-4 flex items-center justify-between gap-3 md:mb-5">
+                <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Event Trace
                 </p>
-                <span className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                <span className="font-mono-accent text-[9px] uppercase tracking-[0.14em] text-slate-500 md:text-[10px] md:tracking-[0.16em]">
                   trc_8f3a...7c2e
                 </span>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 {traceEvents.map((event) => (
                   <div
                     key={`${event.time}-${event.type}`}
-                    className="grid grid-cols-[58px_1fr_auto] items-center gap-3 text-xs"
+                    className="grid grid-cols-[44px_1fr] gap-2 text-[10px] md:grid-cols-[58px_1fr_auto] md:items-center md:gap-3 md:text-xs"
                   >
                     <span className="font-mono-accent text-slate-500">
                       {event.time}
@@ -103,7 +94,7 @@ function DashboardMockup() {
                     </div>
 
                     <span
-                      className={`rounded-none px-2 py-1 text-[10px] font-semibold uppercase ${event.tone}`}
+                      className={`col-span-2 w-fit rounded-none px-2 py-1 text-[9px] font-semibold uppercase md:col-span-1 md:text-[10px] ${event.tone}`}
                     >
                       {event.status}
                     </span>
@@ -112,40 +103,40 @@ function DashboardMockup() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
-                <p className="text-sm font-medium text-slate-300">
+            <div className="grid gap-3 md:space-y-4">
+              <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+                <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Risk Score
                 </p>
 
-                <div className="mt-5 flex items-end justify-between">
+                <div className="mt-4 flex items-end justify-between md:mt-5">
                   <div>
-                    <p className="text-6xl font-bold tracking-tight text-white">
+                    <p className="text-5xl font-bold tracking-tight text-white md:text-6xl">
                       92
                     </p>
-                    <p className="mt-1 text-sm font-medium text-red-300">
+                    <p className="mt-1 text-xs font-medium text-red-300 md:text-sm">
                       High risk
                     </p>
                   </div>
 
-                  <div className="flex h-24 w-24 items-center justify-center rounded-full border-[10px] border-slate-800 border-r-red-400 border-t-red-400">
-                    <span className="font-mono-accent text-xs text-slate-400">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full border-[8px] border-slate-800 border-r-red-400 border-t-red-400 md:h-24 md:w-24 md:border-[10px]">
+                    <span className="font-mono-accent text-[10px] text-slate-400 md:text-xs">
                       /100
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-none border border-white/10 bg-white/[0.04] p-5">
-                <p className="text-sm font-medium text-slate-300">
+              <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+                <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Policy Decision
                 </p>
 
-                <div className="mt-4 rounded-none border border-red-400/20 bg-red-400/10 p-4">
-                  <p className="font-mono-accent text-xs uppercase tracking-[0.16em] text-red-300">
+                <div className="mt-3 rounded-none border border-red-400/20 bg-red-400/10 p-3 md:mt-4 md:p-4">
+                  <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-red-300 md:text-xs">
                     Blocked
                   </p>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                  <p className="mt-2 text-xs leading-5 text-slate-300 md:text-sm md:leading-6">
                     Untrusted source attempted to trigger a high-value financial
                     action.
                   </p>
@@ -154,17 +145,17 @@ function DashboardMockup() {
             </div>
           </div>
 
-          <div className="border-t border-white/10 p-5">
-            <div className="grid gap-3 sm:grid-cols-3">
+          <div className="border-t border-white/10 p-3 md:p-5">
+            <div className="grid grid-cols-3 gap-2 md:gap-3">
               {riskSignals.map((signal) => (
                 <div
                   key={signal.label}
-                  className="rounded-none border border-white/10 bg-white/[0.04] p-4"
+                  className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-4"
                 >
-                  <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                  <p className="font-mono-accent text-[8px] uppercase tracking-[0.14em] text-slate-500 md:text-[10px] md:tracking-[0.16em]">
                     {signal.label}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-white">
+                  <p className="mt-2 text-xs font-semibold text-white md:text-sm">
                     {signal.value}
                   </p>
                 </div>
