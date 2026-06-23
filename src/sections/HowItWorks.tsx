@@ -68,28 +68,24 @@ function HowItWorks() {
           variant="dark"
         />
 
-                <div className="mt-14 grid gap-5 lg:hidden">
+                <div className="mt-8 grid grid-cols-2 gap-3 md:mt-14 md:gap-5 lg:hidden">
           {steps.map((step) => (
-            <div key={step.number} className="pixel-card-dark bg-[#0f1b2d] p-6">
-              <div className="mb-6 flex items-center justify-between gap-4">
-                <span className="font-mono-accent inline-flex min-w-14 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-3 py-2 text-xs font-semibold text-[#ff4fa3]">
+            <div key={step.number} className="pixel-card-dark bg-[#0f1b2d] p-3 md:p-6">
+              <div className="mb-3 md:mb-6">
+                <span className="font-mono-accent inline-flex min-w-9 items-center justify-center border border-[#ff4fa3]/40 bg-[#ff4fa3]/10 px-2 py-1 text-[0.65rem] font-semibold text-[#ff4fa3] md:min-w-14 md:px-3 md:py-2 md:text-xs">
                   {step.number}
-                </span>
-
-                <span className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-slate-500">
-                  {step.tag}
                 </span>
               </div>
 
-              <h3 className="text-2xl font-extrabold leading-tight text-white">
+              <h3 className="text-[1rem] font-extrabold leading-tight text-white md:text-2xl">
                 {step.title}
               </h3>
 
-              <p className="mt-4 text-base leading-8 text-slate-300">
+              <p className="mt-2 text-[0.72rem] leading-5 text-slate-300 md:mt-4 md:text-base md:leading-8">
                 {step.description}
               </p>
 
-              <div className="mt-8 h-[6px] w-20 bg-[#ff4fa3]" />
+              <div className="mt-4 h-[5px] w-14 bg-[#ff4fa3] md:mt-8 md:h-[6px] md:w-20" />
             </div>
           ))}
         </div>
