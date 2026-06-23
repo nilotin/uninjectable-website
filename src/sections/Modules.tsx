@@ -9,6 +9,7 @@ type ProductModule = {
   code: string
   category: string
   description: string
+  badgeIcon: string
 }
 
 const dockItems = [
@@ -41,6 +42,22 @@ function Modules() {
 
   function closeModule() {
     setActiveIndex(null)
+  }
+
+  function renderModuleIcon(module: ProductModule, active = false) {
+    return (
+      <span className="module-folder-with-badge">
+        <ModuleFolderIcon active={active} />
+
+        <span className="module-folder-badge" aria-hidden="true">
+          <img
+            src={`${import.meta.env.BASE_URL}${module.badgeIcon}`}
+            alt=""
+            className="module-folder-badge-icon"
+          />
+        </span>
+      </span>
+    )
   }
 
   return (
@@ -111,7 +128,7 @@ function Modules() {
                       isActive ? 'module-desktop-item-active' : ''
                     }`}
                   >
-                    <ModuleFolderIcon active={isActive} />
+                    {renderModuleIcon(module, isActive)}
 
                     <span className="module-desktop-label">
                       {module.shortTitle}
@@ -149,7 +166,7 @@ function Modules() {
                             isActive ? 'module-mobile-item-active' : ''
                           }`}
                         >
-                          <ModuleFolderIcon active={isActive} />
+                          {renderModuleIcon(module, isActive)}
 
                           <span>{module.shortTitle}</span>
                         </button>
@@ -174,7 +191,7 @@ function Modules() {
                   <div className="module-floating-body">
                     <div className="module-floating-header">
                       <div className="module-floating-icon">
-                        <ModuleFolderIcon active />
+                        {renderModuleIcon(activeModule, true)}
                       </div>
 
                       <div>

@@ -61,10 +61,10 @@ function Footer() {
 
             <div className="mt-4 space-y-3 text-slate-600">
               <a
-                href="mailto:hello@uninjectable.com"
+                href="mailto:info@uninjectable.com"
                 className="block hover:text-blue-600"
               >
-                hello@uninjectable.com
+                info@uninjectable.com
               </a>
               <p>Türkiye / Global</p>
               <p className="font-mono-accent text-xs text-green-600">

@@ -102,6 +102,7 @@ export const productModules = [
     shortTitle: 'Agent Studio',
     code: 'AS',
     category: 'builder',
+    badgeIcon: 'module-icons/code.png',
     description:
       'Provides secure templates, scaffolds, and governance-ready starting points for enterprise AI agent use cases.',
   },
@@ -110,6 +111,7 @@ export const productModules = [
     shortTitle: 'Shadow Discovery',
     code: 'SAD',
     category: 'visibility',
+    badgeIcon: 'module-icons/radar.png',
     description:
       'Discovers AI agents, automations, tool usage flows, and uncontrolled agent behaviors across the organization.',
   },
@@ -118,6 +120,7 @@ export const productModules = [
     shortTitle: 'Why Chain',
     code: 'RWC',
     category: 'explainability',
+    badgeIcon: 'module-icons/chain.png',
     description:
       'Explains why each risk score, policy decision, and agent action occurred through a traceable decision chain.',
   },
@@ -126,6 +129,7 @@ export const productModules = [
     shortTitle: 'Smart Policy',
     code: 'ASPE',
     category: 'policy',
+    badgeIcon: 'module-icons/shield.png',
     description:
       'Evaluates agent actions with deterministic rules, learns from review outcomes, and suggests safer policy improvements over time.',
   },
@@ -134,6 +138,7 @@ export const productModules = [
     shortTitle: 'Token Control',
     code: 'TUC',
     category: 'cost control',
+    badgeIcon: 'module-icons/coin.png',
     description:
       'Tracks token usage by agent, team, workflow, or customer and enforces limits before cost or usage overruns occur.',
   },
@@ -142,6 +147,7 @@ export const productModules = [
     shortTitle: 'Omnichannel',
     code: 'OAI',
     category: 'integration',
+    badgeIcon: 'module-icons/bell.png',
     description:
       'Connects governed agent actions to communication channels such as WhatsApp, SMS, and email while keeping approvals and audit trails visible.',
   },
