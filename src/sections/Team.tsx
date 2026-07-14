@@ -8,8 +8,8 @@ type TeamMemberCard = {
   name: string
   role: string
   description: string
-  image?: string
-  linkedin?: string
+  image?: string | null
+  linkedin?: string | null
 }
 
 type SnapshotCard = {
@@ -18,7 +18,7 @@ type SnapshotCard = {
   label: string
   description: string
   image: string
-}
+} 
 
 type CarouselCard = TeamMemberCard | SnapshotCard
 

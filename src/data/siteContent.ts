@@ -212,8 +212,8 @@ export const teamMembers = [
   {
     name: 'Nilsu Demirağ',
     role: 'COO',
-    image: 'team/nilsu.png',
-    linkedin: 'https://www.linkedin.com/in/nilsu-demirağ-62aa8925a/',
+    image: null,
+    linkedin: null,
     description:
       'Leads operations, customer validation, project coordination, pilot process management, and product design direction.',
   },
