@@ -5,12 +5,12 @@ function Footer() {
         <div>
           <a href="#" className="flex items-center gap-3">
             <img
-              src={`${import.meta.env.BASE_URL}uninjectable-logo-dark.png`}
-              alt="Uninjectable logo"
+              src={`${import.meta.env.BASE_URL}baleena-logo-dark.png`}
+              alt="Baleena logo"
               className="h-12 w-auto"
             />
 
-            <span className="text-lg font-bold">Uninjectable</span>
+            <span className="text-lg font-bold">Baleena</span>
           </a>
 
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">
@@ -61,10 +61,10 @@ function Footer() {
 
             <div className="mt-4 space-y-3 text-slate-600">
               <a
-                href="mailto:info@uninjectable.com"
+                href="mailto:info@getbaleena.com"
                 className="block hover:text-blue-600"
               >
-                info@uninjectable.com
+                info@getbaleena.com
               </a>
               <p>Türkiye / Global</p>
               <p className="font-mono-accent text-xs text-green-600">
@@ -77,7 +77,7 @@ function Footer() {
 
       <div className="border-t border-slate-200 px-6 py-4">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-xs text-slate-500 md:flex-row">
-          <p>© 2026 Uninjectable. All rights reserved.</p>
+          <p>© 2026 Baleena. All rights reserved.</p>
 
           <div className="flex gap-4">
             <a href="#" className="hover:text-blue-600">

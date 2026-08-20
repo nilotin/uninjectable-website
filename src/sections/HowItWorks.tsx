@@ -64,7 +64,7 @@ function HowItWorks() {
         <SectionHeader
           eyebrow="How it works"
           title="Trace. Score. Decide. Explain."
-          description="Uninjectable sits between AI agents and business tools, turning every important action into a visible, policy-backed, and explainable decision."
+          description="Baleena sits between AI agents and business tools, turning every important action into a visible, policy-backed, and explainable decision."
           variant="dark"
         />
 
@@ -203,7 +203,7 @@ function HowItWorks() {
 
             <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base md:leading-8">
               The agent attempts to issue a high-value refund based on an untrusted
-              customer message. Uninjectable detects the risky chain, evaluates the
+              customer message. Baleena detects the risky chain, evaluates the
               policy, and blocks the action before it reaches the CRM.
             </p>
 

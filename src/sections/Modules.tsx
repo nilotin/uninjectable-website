@@ -69,7 +69,7 @@ function Modules() {
         <SectionHeader
           eyebrow="Modules"
           title="Open the governance stack like a control desktop"
-          description="Browse Uninjectable modules as desktop folders. Click the modules that matter most to inspect their role in the runtime governance stack."
+          description="Browse Baleena modules as desktop folders. Click the modules that matter most to inspect their role in the runtime governance stack."
           variant="dark"
         />
 
@@ -82,7 +82,7 @@ function Modules() {
             </div>
 
             <div className="modules-menubar-title">
-              Finder — Uninjectable Modules
+              Finder — Baleena Modules
             </div>
 
             <div className="hidden items-center gap-2 md:flex">
@@ -141,7 +141,7 @@ function Modules() {
             <div className="modules-mobile-phone">
                 <div className="modules-mobile-statusbar">
                     <span>9:41</span>
-                    <span>Uninjectable OS</span>
+                    <span>Baleena OS</span>
                     <span>6 modules</span>
                 </div>
 

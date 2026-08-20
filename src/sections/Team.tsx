@@ -380,7 +380,7 @@ function Team() {
             {teamPhotoLoaded ? (
               <img
                 src={card.image}
-                alt="Uninjectable founding team"
+                alt="Baleena founding team"
                 className="h-full w-full object-cover"
                 onError={() => setTeamPhotoLoaded(false)}
               />
@@ -446,7 +446,7 @@ function Team() {
         <SectionHeader
           eyebrow="Team"
           title="Built by a focused founding team"
-          description="Uninjectable is being developed by a technical and operational founding team focused on AI governance, enterprise security, and customer validation."
+          description="Baleena is being developed by a technical and operational founding team focused on AI governance, enterprise security, and customer validation."
         />
 
         <div

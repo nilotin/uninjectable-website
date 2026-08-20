@@ -63,7 +63,7 @@ export const capabilities = [
 export const workflowSteps = [
   'Agent reads data',
   'Agent calls a tool',
-  'Uninjectable scores the action',
+  'Baleena scores the action',
   'Policy decides',
   'Human reviews when needed',
   'Audit trail is stored',
@@ -155,7 +155,7 @@ export const productModules = [
 
 export const deploymentOptions = [
   {
-    title: 'Uninjectable Cloud',
+    title: 'Baleena Cloud',
     description:
       'A managed platform for teams that want fast onboarding, automatic updates, and minimal infrastructure work.',
     icon: 'deployment-icons/cloud.png',

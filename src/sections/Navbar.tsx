@@ -119,14 +119,14 @@ function Navbar() {
           className="mb-4 flex items-center gap-3"
         >
           <img
-            src={`${import.meta.env.BASE_URL}uninjectable-logo.png`}
-            alt="Uninjectable logo"
+            src={`${import.meta.env.BASE_URL}baleena-logo.png`}
+            alt="Baleena logo"
             className="h-9 w-auto"
           />
 
           <div>
             <span className="block text-lg font-bold tracking-tight text-white">
-              Uninjectable
+              Baleena
             </span>
             <span className="font-mono-accent hidden text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:block">
               Trace · Explain · Control

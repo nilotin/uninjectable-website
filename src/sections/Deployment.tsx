@@ -11,7 +11,7 @@ function Deployment() {
         <SectionHeader
           eyebrow="Deployment"
           title="Flexible deployment for enterprise environments"
-          description="Use Uninjectable in the environment that matches your security, infrastructure, and data control requirements."
+          description="Use Baleena in the environment that matches your security, infrastructure, and data control requirements."
         />
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:gap-6 lg:grid-cols-3">
@@ -49,7 +49,7 @@ function Deployment() {
           <div className="console-bar flex items-center justify-between px-5 py-4">
             <div>
               <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
-                Why Uninjectable
+                Why Baleena
               </p>
               <h3 className="mt-1 text-lg font-semibold text-white">
                 Designed for action-level governance
@@ -72,7 +72,7 @@ function Deployment() {
               </h3>
 
               <p className="mt-6 text-base leading-7 text-slate-300 md:text-lg md:leading-8">
-                Uninjectable is a runtime control layer designed specifically
+                Baleena is a runtime control layer designed specifically
                 for AI agent actions, policies, approvals, and auditability.
               </p>
             </div>

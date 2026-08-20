@@ -11,7 +11,7 @@ function UseCases() {
         <SectionHeader
           eyebrow="Use cases"
           title="Protect workflows where AI agents touch business systems"
-          description="Uninjectable is designed for teams moving AI agents from simple chat interfaces into real operational environments."
+          description="Baleena is designed for teams moving AI agents from simple chat interfaces into real operational environments."
         />
 
         <div className="mt-10 grid w-full min-w-0 grid-cols-2 items-stretch gap-4 md:mt-14 md:grid-cols-2 md:gap-6 lg:grid-cols-4">

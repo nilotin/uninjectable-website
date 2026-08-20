@@ -12,7 +12,7 @@ function SolutionSection() {
         <SectionHeader
           eyebrow="Runtime control layer"
           title="Govern every AI action before business impact"
-          description="Uninjectable acts as a control layer between AI agents and the tools they use, helping teams observe, evaluate, control, and explain agent behavior."
+          description="Baleena acts as a control layer between AI agents and the tools they use, helping teams observe, evaluate, control, and explain agent behavior."
           variant="dark"
         />
 
