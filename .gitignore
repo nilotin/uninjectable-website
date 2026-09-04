@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Pitch deck source files
+*.pptx
+/Baleena-Pitch-Deck.pdf
+

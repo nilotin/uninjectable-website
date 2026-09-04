@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /pitch-deck
+Disallow: /pitch-deck/
+Disallow: /Baleena-Pitch-Deck.pdf
