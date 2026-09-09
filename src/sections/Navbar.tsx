@@ -125,9 +125,13 @@ function Navbar() {
           />
 
           <div>
-            <span className="block text-lg font-bold tracking-tight text-white">
-              Baleena
-            </span>
+            <div className="relative h-7 w-[158px] overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}baleena-title.png`}
+                alt="Baleena"
+                className="absolute -left-[49px] -top-[100px] h-[247px] w-auto max-w-none invert"
+              />
+            </div>
             <span className="font-mono-accent hidden text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:block">
               Trace · Explain · Control
             </span>
