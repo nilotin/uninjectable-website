@@ -121,19 +121,19 @@ function Navbar() {
           <img
             src={`${import.meta.env.BASE_URL}baleena-logo.png`}
             alt="Baleena logo"
-            className="h-9 w-auto"
+            className="h-12 w-auto md:h-14"
           />
 
           <div>
-            <div className="relative h-7 w-[158px] overflow-hidden">
+            <div className="relative h-9 w-[203px] overflow-hidden md:h-10 md:w-[225px]">
               <img
                 src={`${import.meta.env.BASE_URL}baleena-title.png`}
                 alt="Baleena"
-                className="absolute -left-[49px] -top-[100px] h-[247px] w-auto max-w-none invert"
+                className="absolute -left-[63px] -top-[129px] h-[318px] w-auto max-w-none invert md:-left-[70px] md:-top-[143px] md:h-[353px]"
               />
             </div>
             <span className="font-mono-accent hidden text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:block">
-              Trace · Explain · Control
+              Resolve · Enforce · Verify
             </span>
           </div>
         </a>

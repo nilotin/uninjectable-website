@@ -21,7 +21,7 @@ function ProblemSection() {
         <SectionHeader
           eyebrow="The problem"
           title="AI agents are moving from answers to actions"
-          description="AI agents are starting to read data, call tools, update systems, send messages, and trigger business workflows. But most teams still lack visibility and control over these actions."
+          description="AI agents are starting to read data, call tools, update systems, send messages, and trigger business workflows. Most teams still lack a deterministic boundary around what those actions are actually allowed to do."
         />
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:mt-14 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
@@ -82,19 +82,18 @@ function ProblemSection() {
           <div className="grid gap-8 md:grid-cols-[0.9fr_1.4fr] md:items-center">
             <div>
               <p className="font-mono-accent text-xs font-bold uppercase tracking-[0.18em] text-blue-600">
-                Trust, but verify
+                Determinism at the boundary
               </p>
 
               <h3 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-950">
-                Autonomy needs accountability.
+                Let the agent be flexible. Keep execution predictable.
               </h3>
             </div>
 
             <p className="text-lg leading-8 text-slate-600">
-              The real challenge is not only whether an AI agent can complete a
-              task. The challenge is whether your team can understand, control,
-              and explain the action before it affects customers, money, data,
-              or operations.
+              Baleena turns open-ended agent intent into resolved capabilities,
+              explicit stateful policy decisions, review gates, and verifiable
+              effects — before and after your business systems change.
             </p>
           </div>
         </div>

@@ -4,54 +4,54 @@ import EyeCore from '../components/EyeCore'
 const steps = [
   {
     number: '01',
-    title: 'Capture context',
+    title: 'Capture intent & provenance',
     description:
-      'The agent reads messages, documents, customer records, or internal system context.',
-    tag: 'source.read',
+      'Capture the relevant source, actor, request, and execution context.',
+    tag: 'context.observe',
   },
   {
     number: '02',
-    title: 'Detect action intent',
+    title: 'Resolve capability',
     description:
-      'The agent attempts to call an API, update a record, issue a refund, or trigger a workflow.',
-    tag: 'tool.call',
+      'Map the attempted action to its canonical capability identity and authority.',
+    tag: 'capability.resolve',
   },
   {
     number: '03',
-    title: 'Evaluate risk',
+    title: 'Evaluate stateful policy',
     description:
-      'The action is scored using policy rules, source trust, action type, and contextual signals.',
-    tag: 'risk.score',
-  },
-  {
-    number: '04',
-    title: 'Apply policy',
-    description:
-      'The policy engine returns allow, review, or block using deterministic decision logic.',
+      'Evaluate explicit policy against current session state, sequence, cumulative effects, and provenance.',
     tag: 'policy.evaluate',
   },
   {
-    number: '05',
-    title: 'Route review',
+    number: '04',
+    title: 'Commit decision & route review',
     description:
-      'Sensitive or high-risk actions can be routed to human reviewers before execution.',
-    tag: 'human.review',
+      'Allow, review, or block. Human review remains an explicit governance step where required.',
+    tag: 'review.commit',
+  },
+  {
+    number: '05',
+    title: 'Dispatch with EffectSpec',
+    description:
+      'Execute an approved action with its expected or permitted effect declared.',
+    tag: 'effect.declare',
   },
   {
     number: '06',
-    title: 'Store audit trail',
+    title: 'Verify & settle',
     description:
-      'Every source, decision, action, and explanation is preserved for later inspection.',
-    tag: 'audit.log',
+      'Reconcile the authoritative outcome, persist the provenance graph, and surface remediation if constraints were not satisfied.',
+    tag: 'effect.verify',
   },
 ]
 
-const policySignals = [
-  { label: 'Action', value: 'issue_refund' },
-  { label: 'Amount', value: '$5,000' },
-  { label: 'Source Trust', value: 'Untrusted' },
-  { label: 'Policy', value: 'block_high_risk_refund' },
-  { label: 'Risk Score', value: '105' },
+const decisionEvidence = [
+  { label: 'Capability', value: 'crm.refund.create' },
+  { label: 'Authority', value: 'support.refund ($1,000 limit)' },
+  { label: 'Session State', value: '$3,400 cumulative' },
+  { label: 'Policy', value: 'refund.supervisor_limit' },
+  { label: 'Decision', value: 'REVIEW' },
 ]
 
 function HowItWorks() {
@@ -63,8 +63,8 @@ function HowItWorks() {
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="How it works"
-          title="Trace. Score. Decide. Explain."
-          description="Baleena sits between AI agents and business tools, turning every important action into a visible, policy-backed, and explainable decision."
+          title="From model intent to verifiable business effect"
+          description="Baleena resolves what an agent is trying to do, evaluates deterministic policy against current state, governs execution, and verifies what actually changed."
           variant="dark"
         />
 
@@ -182,12 +182,12 @@ function HowItWorks() {
               Example incident flow
             </p>
             <h3 className="mt-1 text-lg font-semibold text-white">
-              High-risk refund attempt
+              Refund request exceeds delegated authority
             </h3>
           </div>
 
-          <span className="hidden border border-red-400/20 bg-red-400/10 px-3 py-1 text-xs font-medium text-red-300 sm:block">
-            Blocked
+          <span className="hidden border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300 sm:block">
+            Review
           </span>
         </div>
 
@@ -198,22 +198,24 @@ function HowItWorks() {
             </p>
 
             <h3 className="mt-4 text-[2rem] font-extrabold leading-tight tracking-tight text-white md:text-4xl">
-              A refund action gets stopped before execution.
+              A refund request is held for supervisor approval.
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base md:leading-8">
-              The agent attempts to issue a high-value refund based on an untrusted
-              customer message. Baleena detects the risky chain, evaluates the
-              policy, and blocks the action before it reaches the CRM.
+              An AI support agent attempts crm.refund.create for $5,000.
+              Baleena resolves the capability, evaluates stateful policy
+              against this session&rsquo;s $3,400 in prior refunds, and finds
+              the request exceeds the agent&rsquo;s delegated authority — so
+              the action is held for review before it reaches the CRM.
             </p>
 
             <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-5">
               {[
-                'Untrusted source',
-                'Refund policy',
-                'CRM tool call',
-                'Risk evaluated',
-                'Blocked',
+                'Capability resolved',
+                'Session state checked',
+                'Policy evaluated',
+                'Authority exceeded',
+                'Review required',
               ].map((item) => (
                 <div
                   key={item}
@@ -233,13 +235,13 @@ function HowItWorks() {
                 Policy check
               </p>
 
-              <span className="border border-red-400/20 bg-red-400/10 px-3 py-1 text-xs font-medium text-red-300">
-                Block
+              <span className="border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
+                Review
               </span>
             </summary>
 
             <div className="mt-5 space-y-3">
-              {policySignals.map((signal) => (
+              {decisionEvidence.map((signal) => (
                 <div
                   key={signal.label}
                   className="grid gap-1 border-b border-white/10 pb-3 last:border-b-0 md:grid-cols-[0.8fr_1fr] md:items-center"
@@ -255,20 +257,22 @@ function HowItWorks() {
               ))}
             </div>
 
-            <details className="mt-5 border border-red-400/20 bg-red-400/10 p-4 md:block" open>
-              <summary className="cursor-pointer list-none font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-red-300">
+            <details className="mt-5 border border-amber-400/20 bg-amber-400/10 p-4 md:block" open>
+              <summary className="cursor-pointer list-none font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-amber-300">
                 Reason
               </summary>
 
               <p className="mt-2 text-sm leading-7 text-slate-300">
-                Untrusted source attempted to trigger a high-value financial action
-                over the approved policy limit.
+                The requested $5,000 refund exceeds the agent&rsquo;s $1,000
+                delegated authority for this session, and cumulative refunds
+                already total $3,400 — supervisor approval is required before
+                the action can proceed.
               </p>
             </details>
 
             <details className="mt-4 border border-green-400/20 bg-green-400/10 p-4 md:block" open>
               <summary className="cursor-pointer list-none font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-green-300">
-                Audit trail stored
+                Provenance graph stored
               </summary>
 
               <p className="mt-2 font-mono text-xs leading-6 text-slate-300">
@@ -276,9 +280,9 @@ function HowItWorks() {
                 <br />
                 actor: support_agent_01
                 <br />
-                decision: BLOCK
+                decision: REVIEW
                 <br />
-                status: logged
+                status: routed_to_supervisor
               </p>
             </details>
           </details>

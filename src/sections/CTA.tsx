@@ -11,7 +11,7 @@ function CTA() {
           <div className="mb-10 flex items-start justify-between gap-6">
             <div>
               <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
-                Make autonomous AI accountable
+                Flexible agents. Predictable operations.
               </p>
 
               <h2 className="mt-5 text-[2.65rem] font-extrabold leading-[1] tracking-tight text-white md:text-7xl">
@@ -19,8 +19,9 @@ function CTA() {
               </h2>
 
               <p className="mt-6 text-base leading-7 text-slate-300 md:text-xl md:leading-9">
-                Let’s make them observable, controllable, and accountable before
-                they impact your customers, systems, or operations.
+                Put AI agents into real workflows without giving up
+                deterministic authority, explicit policy, and verifiable
+                outcomes.
               </p>
             </div>
 

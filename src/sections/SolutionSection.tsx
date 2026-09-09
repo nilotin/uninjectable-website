@@ -10,9 +10,9 @@ function SolutionSection() {
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Runtime control layer"
-          title="Govern every AI action before business impact"
-          description="Baleena acts as a control layer between AI agents and the tools they use, helping teams observe, evaluate, control, and explain agent behavior."
+          eyebrow="Deterministic execution governance"
+          title="Govern every AI capability before business impact"
+          description="Baleena sits between AI agents and the tools they use, resolving capabilities, enforcing stateful policy, verifying effects, and tracing every decision."
           variant="dark"
         />
 

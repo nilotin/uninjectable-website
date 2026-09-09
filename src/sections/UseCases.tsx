@@ -45,11 +45,11 @@ function UseCases() {
                         <div key={group} className="use-case-trace-group">
                           <span>source.read</span>
                           <span>→</span>
-                          <span>tool.call</span>
+                          <span>capability.resolve</span>
                           <span>→</span>
-                          <span>policy.check</span>
+                          <span>policy.evaluate</span>
                           <span>→</span>
-                          <span>decision</span>
+                          <span>effect.verify</span>
                           <span>→</span>
                         </div>
                       ))}

@@ -14,12 +14,12 @@ type ProductModule = {
 
 const dockItems = [
   { type: 'finder', label: 'Finder' },
-  { type: 'pink', label: 'Runtime Policy' },
-  { type: 'blue', label: 'Why Chain' },
+  { type: 'pink', label: 'Agent Studio' },
+  { type: 'blue', label: 'Omnichannel' },
   { type: 'cyan', label: 'Audit Ledger' },
   { type: 'purple', label: 'Control Center' },
   { type: 'pink', label: 'Shadow Discovery' },
-  { type: 'blue', label: 'Usage Budgets' },
+  { type: 'blue', label: 'Token Control' },
   { type: 'cyan', label: 'Notification Outbox' },
   { type: 'purple', label: 'Pilot Hardening' },
   { type: 'trash', label: 'Trash' },

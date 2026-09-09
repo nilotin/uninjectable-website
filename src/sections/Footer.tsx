@@ -14,8 +14,9 @@ function Footer() {
           </a>
 
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">
-            Runtime governance for AI agents. Monitor, risk-score, approve, or
-            block AI actions before they impact your business.
+            Deterministic runtime governance for AI agents. Resolve
+            capabilities, enforce policy, route review, and verify effects
+            before autonomous actions become business impact.
           </p>
 
           <p className="font-mono-accent mt-4 text-xs text-slate-400">
@@ -108,9 +109,9 @@ function Footer() {
               <span>·</span>
               <span>audit trail preserved</span>
               <span>·</span>
-              <span>risk score calculated</span>
+              <span>effect verified</span>
               <span>·</span>
-              <span>action controlled</span>
+              <span>action governed</span>
               <span>·</span>
             </div>
           ))}

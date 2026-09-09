@@ -11,17 +11,19 @@ function Hero() {
           <div className="mb-5 inline-flex items-center gap-3 rounded-none border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-[0.7rem] md:mb-6 md:px-4 md:py-3 md:text-xs">
             <span className="status-dot h-2 w-2 rounded-none bg-green-400" />
             <span className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
-              Every action leaves a trail
+              Flexible agents. Deterministic boundaries.
             </span>
           </div>
 
           <h1 className="mt-0 text-[3.1rem] font-extrabold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
-            Runtime Governance for AI Agents
+            Deterministic Control for Probabilistic AI Agents
           </h1>
 
           <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-300 md:mt-6 md:text-2xl md:leading-10">
-            Trace, evaluate, approve, or block autonomous AI actions before they
-            impact your customers, systems, or operations.
+            Baleena keeps the flexibility of LLM agents while adding
+            RPA-like determinism at the execution boundary — resolving
+            capabilities, enforcing stateful policy, routing review, and
+            verifying real-world effects.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-8 md:gap-4">
@@ -34,34 +36,34 @@ function Hero() {
           <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4 md:mt-10">
             <div className="rounded-none border border-white/10 bg-white/5 p-3 md:p-4">
               <p className="font-mono-accent text-[0.62rem] uppercase tracking-[0.14em] text-cyan-300 md:text-xs md:tracking-[0.16em]">
-                Trace
+                Resolve
               </p>
               <p className="mt-2 text-[0.72rem] font-semibold leading-snug text-white md:text-sm">
-                Every source, tool call, and action.
+                Canonical capability identity.
               </p>
             </div>
 
             <div className="rounded-none border border-white/10 bg-white/5 p-3 md:p-4">
               <p className="font-mono-accent text-[0.62rem] uppercase tracking-[0.14em] text-cyan-300 md:text-xs md:tracking-[0.16em]">
-                Explain
+                Enforce
               </p>
               <p className="mt-2 text-[0.72rem] font-semibold leading-snug text-white md:text-sm">
-                Human-readable risk reasons.
+                Stateful, deterministic policy.
               </p>
             </div>
 
             <div className="rounded-none border border-white/10 bg-white/5 p-3 md:p-4">
               <p className="font-mono-accent text-[0.62rem] uppercase tracking-[0.14em] text-cyan-300 md:text-xs md:tracking-[0.16em]">
-                Control
+                Verify
               </p>
               <p className="mt-2 text-[0.72rem] font-semibold leading-snug text-white md:text-sm">
-                Allow, review, or block by policy.
+                Declared effect vs. actual outcome.
               </p>
             </div>
           </div>
 
           <p className="font-mono-accent mt-6 text-xs text-slate-400 md:mt-8 md:text-sm">
-            AI agents act. We show why.
+            Let the model be flexible. Keep execution predictable.
           </p>
         </div>
 

@@ -9,147 +9,148 @@ export const navItems = [
 
 export const problems = [
   {
-    title: 'Lack of Visibility',
-    description: "You can't secure or improve what you can't see.",
+    title: 'Ambiguous Capability Identity',
+    description:
+      "Tool names and raw requests don't always express the exact business capability, authority, and effect an agent is really invoking.",
     icon: 'problem-icons/visibility.png',
   },
   {
-    title: 'Uncontrolled Actions',
+    title: 'Stateless Guardrails',
     description:
-      "AI agents can access tools, data, and workflows in ways teams didn't intend.",
-    icon: 'problem-icons/actions.png',
+      'Single-action checks miss previous actions, cumulative limits, session state, sequence, and prior reviews.',
+    icon: 'problem-icons/policy.png',
   },
   {
-    title: 'Weak Auditability',
+    title: 'Execution Is Not Outcome',
     description:
-      'Without clear traces, compliance, debugging, and forensics become difficult.',
+      'A successful request only proves a call returned. It does not prove the intended business effect actually occurred.',
     icon: 'problem-icons/auditability.png',
   },
   {
-    title: 'Policy Gaps',
+    title: 'Probabilistic Control Loops',
     description:
-      'Generic monitoring tools do not understand action-level AI governance.',
-    icon: 'problem-icons/policy.png',
+      'When probabilistic agents can change real systems, final execution authority needs explicit, reproducible policy — not another opaque judgment.',
+    icon: 'problem-icons/actions.png',
   },
 ]
 
 export const capabilities = [
   {
-    title: 'Observe',
+    title: 'Resolve',
     description:
-      'Capture agent events including source reads, retrievals, tool calls, action attempts, and outcomes.',
+      'Resolve attempted actions into canonical capability identities with relevant authority and context.',
     icon: 'solution-icons/observe.png',
   },
   {
-    title: 'Evaluate',
+    title: 'Enforce',
     description:
-      'Score every action using policy rules, source trust, action type, and contextual risk signals.',
-    icon: 'solution-icons/evaluate.png',
-  },
-  {
-    title: 'Control',
-    description:
-      'Allow, review, or block AI actions using deterministic policy checks and human approval workflows.',
+      'Apply deterministic, stateful policy using session history, sequence, cumulative effects, and review state.',
     icon: 'solution-icons/control.png',
   },
   {
-    title: 'Explain',
+    title: 'Verify',
     description:
-      'Provide human-readable explanations and complete audit trails for every agent decision.',
+      'Define expected effects with EffectSpec and reconcile authoritative state after dispatch.',
+    icon: 'solution-icons/evaluate.png',
+  },
+  {
+    title: 'Trace',
+    description:
+      'Preserve a causal provenance graph linking sources, actions, decisions, reviews, and outcomes.',
     icon: 'solution-icons/explain.png',
   },
 ]
 
 export const workflowSteps = [
   'Agent reads data',
-  'Agent calls a tool',
-  'Baleena scores the action',
-  'Policy decides',
-  'Human reviews when needed',
-  'Audit trail is stored',
+  'Agent attempts a capability',
+  'Baleena resolves the capability',
+  'Stateful policy decides',
+  'Human reviews when required',
+  'Effect is verified and settled',
 ]
 
 export const useCases = [
   {
     title: 'Customer Support AI Agents',
     description:
-      'Review refunds, credits, account changes, escalations, and customer-facing messages before execution.',
+      'Capability-level control over refunds, credits, account changes, and outbound customer messages before they execute.',
     icon: 'use-case-icons/support.png',
   },
   {
     title: 'IT / Cloud Operations',
     description:
-      'Govern infrastructure changes, incident workflows, and operational commands triggered by AI agents.',
+      'Explicit, stateful policy before configuration changes, commands, deployments, and other operational actions.',
     icon: 'use-case-icons/cloud.png',
   },
   {
     title: 'Security Operations',
     description:
-      'Add approval and traceability to AI-assisted triage, alert handling, and response workflows.',
+      'Authority checks, approval routing, and a verified execution trace for AI-assisted triage and response.',
     icon: 'use-case-icons/security.png',
   },
   {
     title: 'Internal Workflow Agents',
     description:
-      'Control agents that update CRM records, send emails, modify tickets, or interact with internal tools.',
+      'Stateful, cumulative constraints on agents that touch the CRM, email, tickets, and internal APIs.',
     icon: 'use-case-icons/workflow.png',
   },
 ]
 
 export const productModules = [
   {
-    title: 'Agent Studio',
-    shortTitle: 'Agent Studio',
-    code: 'AS',
-    category: 'builder',
-    badgeIcon: 'module-icons/code.png',
-    description:
-      'Provides secure templates, scaffolds, and governance-ready starting points for enterprise AI agent use cases.',
-  },
-  {
-    title: 'Shadow Agent Discovery',
-    shortTitle: 'Shadow Discovery',
-    code: 'SAD',
-    category: 'visibility',
-    badgeIcon: 'module-icons/radar.png',
-    description:
-      'Discovers AI agents, automations, tool usage flows, and uncontrolled agent behaviors across the organization.',
-  },
-  {
-    title: 'Rich Why Chain',
-    shortTitle: 'Why Chain',
-    code: 'RWC',
-    category: 'explainability',
+    title: 'Capability Resolver',
+    shortTitle: 'Capability Resolve',
+    code: 'CR',
+    category: 'identity',
     badgeIcon: 'module-icons/chain.png',
     description:
-      'Explains why each risk score, policy decision, and agent action occurred through a traceable decision chain.',
+      'Resolves agent/tool intent into a canonical capability identity and authority context before governance decisions are made.',
   },
   {
-    title: 'Adaptive Smart Policy Engine',
-    shortTitle: 'Smart Policy',
-    code: 'ASPE',
-    category: 'policy',
+    title: 'Stateful Policy Engine',
+    shortTitle: 'Stateful Policy',
+    code: 'SPE',
+    category: 'enforcement',
     badgeIcon: 'module-icons/shield.png',
     description:
-      'Evaluates agent actions with deterministic rules, learns from review outcomes, and suggests safer policy improvements over time.',
+      'Applies deterministic policy across session history, action sequence, cumulative effects, provenance, and previous review state.',
   },
   {
-    title: 'Token Usage Control',
-    shortTitle: 'Token Control',
-    code: 'TUC',
-    category: 'cost control',
-    badgeIcon: 'module-icons/coin.png',
+    title: 'Provenance Graph',
+    shortTitle: 'Provenance Graph',
+    code: 'PG',
+    category: 'causal trace',
+    badgeIcon: 'module-icons/nodes.svg',
     description:
-      'Tracks token usage by agent, team, workflow, or customer and enforces limits before cost or usage overruns occur.',
+      'Builds a causal graph connecting sources, agent actions, capabilities, decisions, reviews, execution, and observed outcomes.',
   },
   {
-    title: 'Omnichannel Action Integrations',
-    shortTitle: 'Omnichannel',
-    code: 'OAI',
-    category: 'integration',
-    badgeIcon: 'module-icons/bell.png',
+    title: 'Effect Verification',
+    shortTitle: 'Effect Verify',
+    code: 'EV',
+    category: 'effect integrity',
+    badgeIcon: 'module-icons/target-check.svg',
     description:
-      'Connects governed agent actions to communication channels such as WhatsApp, SMS, and email while keeping approvals and audit trails visible.',
+      'Uses EffectSpec to declare expected or permitted changes, then reconciles authoritative state to verify what actually happened.',
+  },
+  {
+    title: 'Verifiable Remediation',
+    shortTitle: 'Remediation',
+    code: 'VR',
+    category: 'recovery',
+    badgeIcon: 'module-icons/retry.svg',
+    description:
+      'Returns explicit constraints for a compliant fresh retry and verifies required evidence before execution continues.',
+  },
+  {
+    title: 'Review-Guided Policy Suggestions',
+    shortTitle: 'Policy Suggestions',
+    code: 'RPS',
+    category: 'governance feedback',
+    badgeIcon: 'module-icons/checklist.svg',
+    description:
+      'Uses repeated human-review outcomes to surface candidate explicit policies without silently changing enforcement behavior.',
   },
 ]
 
@@ -176,19 +177,19 @@ export const deploymentOptions = [
 
 export const differentiators = [
   {
-    title: 'Action-level governance',
+    title: 'Capability-level governance',
     description:
-      'Control every important agent action, not just conversations or system logs.',
+      'Control every important agent capability, not just conversations or system logs.',
   },
   {
-    title: 'Deterministic policy decisions',
+    title: 'Deterministic, stateful policy',
     description:
-      'Use explicit policy checks for allow, review, and block decisions instead of relying only on LLM judgment.',
+      'Use explicit, reproducible policy over session state and sequence for allow, review, and block decisions — not LLM judgment alone.',
   },
   {
-    title: 'Explainable audit trail',
+    title: 'Verifiable causal trail',
     description:
-      'Understand why an action was allowed, reviewed, or blocked with complete decision context.',
+      'See why an action was allowed, reviewed, or blocked, and verify what actually changed once it executed.',
   },
 ]
 
@@ -207,7 +208,7 @@ export const teamMembers = [
     image: 'team/birdem.png',
     linkedin: 'https://www.linkedin.com/in/birdem-üstündağ-a9741a354/',
     description:
-      'Leads product architecture, backend, SDK, risk engine, policy infrastructure, and technical validation.',
+      'Leads product architecture, backend, SDK, runtime enforcement, policy infrastructure, and technical validation.',
   },
   {
     name: 'Nilsu Demirağ',
