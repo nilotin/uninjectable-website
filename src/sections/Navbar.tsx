@@ -109,22 +109,22 @@ function Navbar() {
         </div>
       </div>
 
-      <nav className="mx-auto flex max-w-7xl items-end justify-between px-6 pt-4">
+      <nav className="mx-auto flex max-w-7xl items-end justify-between px-4 pt-3 sm:px-6 sm:pt-4">
         <a
           href="/"
           onClick={() => {
             setActiveHref(navItems[0]?.href ?? '#product')
             closeMenu()
           }}
-          className="mb-4 flex items-center gap-3"
+          className="mb-3 flex min-w-0 items-center gap-2 sm:mb-4 sm:gap-3"
         >
           <img
             src={`${import.meta.env.BASE_URL}baleena-logo.png`}
             alt="Baleena logo"
-            className="h-12 w-auto md:h-14"
+            className="h-10 w-auto shrink-0 sm:h-12 md:h-14"
           />
 
-          <div>
+          <div className="hidden min-[375px]:block">
             <div className="relative h-9 w-[203px] overflow-hidden md:h-10 md:w-[225px]">
               <img
                 src={`${import.meta.env.BASE_URL}baleena-title.png`}
@@ -173,7 +173,7 @@ function Navbar() {
 
         <button
           onClick={() => setIsOpen((current) => !current)}
-          className="mb-4 border border-white/15 px-3 py-2 text-sm font-medium text-white md:hidden"
+          className="mb-3 shrink-0 border border-white/15 px-3 py-2 text-sm font-medium text-white sm:mb-4 md:hidden"
           aria-label="Toggle navigation menu"
         >
           {isOpen ? 'Close' : 'Menu'}

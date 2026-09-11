@@ -3,7 +3,7 @@ import DashboardMockup from '../components/DashboardMockup'
 
 function Hero() {
   return (
-    <section className="dark-subtle-grid px-4 pt-28 pb-6 sm:px-6 md:py-24 text-white">
+    <section className="dark-subtle-grid relative isolate overflow-hidden px-4 pb-6 pt-28 text-white sm:px-6 md:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.24),transparent_34%),radial-gradient(circle_at_left,rgba(56,189,248,0.12),transparent_35%)]" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-0 pb-8 pt-8 sm:px-6 md:gap-14 md:px-6 md:pb-24 md:pt-12 lg:grid-cols-[0.9fr_1.1fr]">
