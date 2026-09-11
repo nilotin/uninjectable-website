@@ -48,6 +48,15 @@ function Footer() {
               <a href="#team" className="block hover:text-blue-600">
                 Team
               </a>
+
+<a
+  href="https://www.linkedin.com/company/getbaleena/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block hover:text-blue-600"
+>
+  LinkedIn
+</a>
               <a href="#contact" className="block hover:text-blue-600">
                 Contact
               </a>
