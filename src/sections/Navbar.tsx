@@ -111,7 +111,7 @@ function Navbar() {
 
       <nav className="mx-auto flex max-w-7xl items-end justify-between px-6 pt-4">
         <a
-          href="#"
+          href="/"
           onClick={() => {
             setActiveHref(navItems[0]?.href ?? '#product')
             closeMenu()

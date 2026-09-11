@@ -348,8 +348,8 @@ function Team() {
           {card.description}
         </p>
 
-        <div className="mt-8 border-t border-slate-200 pt-5">
-          {card.linkedin ? (
+        {card.linkedin ? (
+          <div className="mt-8 border-t border-slate-200 pt-5">
             <a
               href={card.linkedin}
               target="_blank"
@@ -362,12 +362,8 @@ function Team() {
               LinkedIn profile
               <span aria-hidden="true">↗</span>
             </a>
-          ) : (
-            <span className="font-mono-accent text-xs text-slate-400">
-              LinkedIn profile
-            </span>
-          )}
-        </div>
+          </div>
+        ) : null}
       </div>
     )
   }
@@ -391,7 +387,7 @@ function Team() {
                     Team photo
                   </p>
                   <p className="mt-2 text-sm text-slate-500">
-                    Add image as public/team-photo.jpg
+                    Baleena founding team
                   </p>
                 </div>
               </div>

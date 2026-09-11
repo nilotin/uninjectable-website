@@ -33,7 +33,7 @@ function CTA() {
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button href="mailto:hello@getbaleena.com">
+            <Button href="mailto:info@getbaleena.com">
               Request a Discovery Call
             </Button>
 

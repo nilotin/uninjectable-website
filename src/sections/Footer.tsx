@@ -3,7 +3,7 @@ function Footer() {
     <footer className="border-t border-slate-200 bg-white text-slate-950">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-12 md:flex-row md:items-start md:justify-between">
         <div>
-          <a href="#" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3">
             <img
               src={`${import.meta.env.BASE_URL}baleena-logo-dark.png`}
               alt="Baleena logo"
@@ -88,21 +88,6 @@ function Footer() {
       <div className="border-t border-slate-200 px-6 py-4">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-xs text-slate-500 md:flex-row">
           <p>© 2026 Baleena. All rights reserved.</p>
-
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-blue-600">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              Terms
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              Security
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              Status
-            </a>
-          </div>
         </div>
       </div>
 

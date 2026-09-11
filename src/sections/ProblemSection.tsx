@@ -14,7 +14,7 @@ function ProblemSection() {
 
   return (
     <section
-      id="product"
+      id="problem"
       className="subtle-grid bg-[#eef3fb] px-4 py-16 sm:px-6 md:py-24 scroll-mt-24"
     >
       <div className="mx-auto max-w-7xl">
