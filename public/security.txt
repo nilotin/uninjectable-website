@@ -1,0 +1,9 @@
+# Baleena security contact — RFC 9116
+# Policy and reporting guidelines: https://getbaleena.com/security/
+
+Contact: mailto:security@getbaleena.com
+Contact: mailto:info@getbaleena.com
+Expires: 2027-09-29T00:00:00.000Z
+Preferred-Languages: en, tr
+Canonical: https://getbaleena.com/.well-known/security.txt
+Policy: https://getbaleena.com/security/

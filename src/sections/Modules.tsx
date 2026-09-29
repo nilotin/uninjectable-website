@@ -96,7 +96,7 @@ function Modules() {
           <div
             className="modules-desktop-wallpaper"
             style={{
-              backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.38), rgba(5, 8, 22, 0.48)), url('${import.meta.env.BASE_URL}modules/modules-wallpaper.png')`,
+              backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.38), rgba(5, 8, 22, 0.48)), url('${import.meta.env.BASE_URL}modules/modules-wallpaper.jpg')`,
             }}
           >
             <div className="modules-desktop-widget modules-widget-left">

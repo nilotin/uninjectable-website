@@ -1,4 +1,8 @@
 User-agent: *
-Disallow: /pitch-deck
+Allow: /
 Disallow: /pitch-deck/
+Disallow: /pitch-deck-tr/
 Disallow: /Baleena-Pitch-Deck.pdf
+Disallow: /Baleena-Pitch-Deck-TR.pdf
+
+Sitemap: https://getbaleena.com/sitemap.xml

@@ -327,6 +327,10 @@ function Team() {
           <img
             src={`${import.meta.env.BASE_URL}${card.image}`}
             alt={card.name}
+            width={96}
+            height={96}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover"
           />
           ) : (
@@ -377,6 +381,8 @@ function Team() {
               <img
                 src={card.image}
                 alt="Baleena founding team"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
                 onError={() => setTeamPhotoLoaded(false)}
               />

@@ -197,7 +197,7 @@ export const teamMembers = [
   {
     name: 'Yavuz Selim Yaşar',
     role: 'CEO',
-    image: 'team/yavuz.png',
+    image: 'team/yavuz.jpg',
     linkedin: 'https://www.linkedin.com/in/yavuz-selim-yaşar-622a2324a/',
     description:
       'Leads company strategy, partnerships, customer discovery, and business development.',
@@ -205,7 +205,7 @@ export const teamMembers = [
   {
     name: 'Birdem Üstündağ',
     role: 'CTO',
-    image: 'team/birdem.png',
+    image: 'team/birdem.jpg',
     linkedin: 'https://www.linkedin.com/in/birdem-üstündağ-a9741a354/',
     description:
       'Leads product architecture, backend, SDK, runtime enforcement, policy infrastructure, and technical validation.',
@@ -213,7 +213,7 @@ export const teamMembers = [
   {
     name: 'Nilsu Demirağ',
     role: 'COO',
-    image: 'team/nilsu.png',
+    image: 'team/nilsu.jpg',
     linkedin: 'https://www.linkedin.com/in/nilsu-demira%C4%9F-62aa8925a/',
     description:
       'Leads operations, customer validation, project coordination, pilot process management, and product design direction.',
@@ -221,7 +221,7 @@ export const teamMembers = [
   {
     name: 'Cansın İsmail Bahçeci',
     role: 'CBO',
-    image: 'team/cansin.png',
+    image: 'team/cansin.jpg',
     linkedin: 'https://www.linkedin.com/in/cansın-ismail-bahçeci-81b6a42a3/',
     description:
       'Leads business strategy, commercial partnerships, customer development, and go-to-market positioning.',
@@ -229,7 +229,7 @@ export const teamMembers = [
   {
     name: 'Arif Emre Kılıç',
     role: 'CFO',
-    image: 'team/arif.png',
+    image: 'team/arif.jpg',
     linkedin: 'https://www.linkedin.com/in/arif-emre-kılıç-2552bb2a5/',
     description:
       'Leads financial planning, budgeting, pricing analysis, investor reporting, and financial operations.',

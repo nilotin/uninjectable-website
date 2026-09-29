@@ -88,6 +88,18 @@ function Footer() {
       <div className="border-t border-slate-200 px-6 py-4">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 text-xs text-slate-500 md:flex-row">
           <p>© 2026 Baleena. All rights reserved.</p>
+
+          <nav aria-label="Legal" className="flex flex-wrap gap-5">
+            <a href="/security/" className="hover:text-blue-600">
+              Security
+            </a>
+            <a href="/privacy/" className="hover:text-blue-600">
+              Privacy
+            </a>
+            <a href="/terms/" className="hover:text-blue-600">
+              Terms
+            </a>
+          </nav>
         </div>
       </div>
 
