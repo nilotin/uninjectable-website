@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Baleena — Yatırımcı Sunumu</title>
+    <meta name="description" content="Baleena Yatırımcı Sunumu (Türkçe)" />
+    <meta name="theme-color" content="#050816" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #050816;
+        color: #f1f5f9;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+      }
+      .header {
+        height: 48px;
+        min-height: 48px;
+        background-color: #070b1e;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        z-index: 10;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .brand img {
+        height: 24px;
+        width: auto;
+        display: block;
+      }
+      .brand-title {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: #f8fafc;
+      }
+      .badge {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(59, 130, 246, 0.25);
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+      }
+      .btn-primary {
+        background-color: #2563eb;
+        color: #ffffff;
+        border: 1px solid #3b82f6;
+      }
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+      }
+      .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.06);
+        color: #cbd5e1;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .btn-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+      }
+      .viewer-wrapper {
+        flex: 1;
+        width: 100%;
+        height: calc(100vh - 48px);
+        background-color: #0d1117;
+        position: relative;
+      }
+      .pdf-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+      .fallback-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+        background-color: #050816;
+      }
+      .fallback-card {
+        max-width: 400px;
+        padding: 32px 24px;
+        border-radius: 12px;
+        background-color: #0d1117;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .fallback-card h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #f8fafc;
+      }
+      .fallback-card p {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      .fallback-card .actions {
+        justify-content: center;
+      }
+      @media (max-width: 480px) {
+        .brand-title {
+          display: none;
+        }
+        .header {
+          padding: 0 12px;
+        }
+        .btn {
+          font-size: 12px;
+          padding: 5px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="/" class="brand" title="Baleena Ana Sayfa">
+          <img src="/baleena-logo.png" alt="Baleena Logo" />
+          <span class="brand-title">Baleena</span>
+          <span class="badge">Pitch Deck · TR</span>
+        </a>
+        <nav class="actions" aria-label="Sunum işlemleri">
+          <a
+            href="/Baleena-Pitch-Deck-TR.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            id="open-pdf-btn"
+          >
+            PDF Aç
+          </a>
+          <a
+            href="/Baleena-Pitch-Deck-TR.pdf"
+            download="Baleena-Pitch-Deck-TR.pdf"
+            class="btn btn-secondary"
+            id="download-pdf-btn"
+          >
+            İndir
+          </a>
+        </nav>
+      </header>
+      <main class="viewer-wrapper">
+        <object
+          data="/Baleena-Pitch-Deck-TR.pdf#view=FitH"
+          type="application/pdf"
+          class="pdf-frame"
+          aria-label="Baleena Yatırımcı Sunumu PDF"
+        >
+          <iframe
+            src="/Baleena-Pitch-Deck-TR.pdf#view=FitH"
+            class="pdf-frame"
+            title="Baleena Yatırımcı Sunumu"
+          >
+            <div class="fallback-content">
+              <div class="fallback-card">
+                <h2>Baleena Yatırımcı Sunumu</h2>
+                <p>
+                  Tarayıcınız PDF görüntülemeyi desteklemiyor. Sunumu aşağıdan açabilir veya indirebilirsiniz.
+                </p>
+                <div class="actions">
+                  <a
+                    href="/Baleena-Pitch-Deck-TR.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                  >
+                    PDF Aç
+                  </a>
+                  <a
+                    href="/Baleena-Pitch-Deck-TR.pdf"
+                    download="Baleena-Pitch-Deck-TR.pdf"
+                    class="btn btn-secondary"
+                  >
+                    PDF İndir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </iframe>
+        </object>
+      </main>
+    </div>
+    <script src="/special-page-history.js"></script>
+  </body>
+</html>
