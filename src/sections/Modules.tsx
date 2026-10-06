@@ -76,7 +76,7 @@ function Modules() {
         <div className="modules-desktop-shell mt-10 md:mt-20">
           <div className="modules-desktop-menubar">
             <div className="flex items-center gap-2">
-              <span className="modules-window-dot bg-[#ff4fa3]" />
+              <span className="modules-window-dot bg-[#03b7f7]" />
               <span className="modules-window-dot bg-[#f59e0b]" />
               <span className="modules-window-dot bg-[#22c55e]" />
             </div>
@@ -96,7 +96,7 @@ function Modules() {
           <div
             className="modules-desktop-wallpaper"
             style={{
-              backgroundImage: `linear-gradient(rgba(5, 8, 22, 0.38), rgba(5, 8, 22, 0.48)), url('${import.meta.env.BASE_URL}modules/modules-wallpaper.jpg')`,
+              backgroundImage: `linear-gradient(rgba(0, 35, 61, 0.38), rgba(0, 35, 61, 0.48)), url('${import.meta.env.BASE_URL}modules/modules-wallpaper-blue.jpg')`,
             }}
           >
             <div className="modules-desktop-widget modules-widget-left">

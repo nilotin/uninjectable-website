@@ -103,9 +103,9 @@ function EyeCore() {
           </radialGradient>
 
           <radialGradient id={irisId} cx="38%" cy="34%" r="72%">
-            <stop offset="0%" stopColor="#7dd3fc" />
-            <stop offset="42%" stopColor="#256f93" />
-            <stop offset="100%" stopColor="#10263a" />
+            <stop offset="0%" stopColor="#aee6fd" />
+            <stop offset="42%" stopColor="#039fdc" />
+            <stop offset="100%" stopColor="#003459" />
           </radialGradient>
         </defs>
 
@@ -126,7 +126,7 @@ function EyeCore() {
               cy="60"
               r="30"
               fill={`url(#${irisId})`}
-              stroke="rgba(125, 211, 252, 0.3)"
+              stroke="rgba(174, 230, 253, 0.3)"
               strokeWidth="2"
               className="orbit-eye-iris-svg"
             />

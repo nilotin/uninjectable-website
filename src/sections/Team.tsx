@@ -321,8 +321,8 @@ function Team() {
 
   function renderMemberCard(card: TeamMemberCard) {
     return (
-      <div className="pixel-card bg-[#f8fbff] p-8 transition duration-200">
-        <div className="mb-6 h-24 w-24 overflow-hidden border-2 border-slate-950 bg-slate-100 shadow-[4px_4px_0_rgba(15,23,42,0.18)]">
+      <div className="pixel-card bg-[#fbfcfd] p-8 transition duration-200">
+        <div className="mb-6 h-24 w-24 overflow-hidden border border-[#b7c1cb] bg-slate-100 shadow-[0_2px_8px_rgba(15,23,42,0.12)]">
           {card.image ? (
           <img
             src={`${import.meta.env.BASE_URL}${card.image}`}
@@ -334,7 +334,7 @@ function Team() {
             className="h-full w-full object-cover"
           />
           ) : (
-            <div className="flex h-full w-full items-center justify-center text-blue-700">
+            <div className="flex h-full w-full items-center justify-center text-[#025b83]">
               <span className="text-lg font-bold">{getInitials(card.name)}</span>
             </div>
           )}
@@ -344,7 +344,7 @@ function Team() {
           {card.name}
         </h3>
 
-        <p className="font-mono-accent mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
+        <p className="font-mono-accent mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#0175a6]">
           {card.role}
         </p>
 
@@ -361,7 +361,7 @@ function Team() {
               onPointerDown={(event) => event.stopPropagation()}
               onPointerUp={(event) => event.stopPropagation()}
               onClick={(event) => event.stopPropagation()}
-              className="font-mono-accent inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-blue-600 transition hover:text-[#ff4fa3]"
+              className="font-mono-accent inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#0175a6] transition hover:text-[#03b7f7]"
             >
               LinkedIn profile
               <span aria-hidden="true">↗</span>
@@ -374,9 +374,9 @@ function Team() {
 
   function renderSnapshotCard(card: SnapshotCard) {
     return (
-      <div className="pixel-card bg-[#f8fbff] p-8 transition duration-200">
+      <div className="pixel-card bg-[#fbfcfd] p-8 transition duration-200">
         <div className="mb-6">
-          <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-slate-950 bg-slate-100">
+          <div className="relative aspect-[4/3] w-full overflow-hidden border border-[#b7c1cb] bg-slate-100">
             {teamPhotoLoaded ? (
               <img
                 src={card.image}
@@ -400,14 +400,14 @@ function Team() {
             )}
 
             <div className="absolute right-3 top-3 bg-white/90 px-3 py-1 backdrop-blur">
-              <span className="font-mono-accent text-[10px] font-semibold uppercase tracking-[0.16em] text-blue-600">
+              <span className="font-mono-accent text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0175a6]">
                 Snapshot
               </span>
             </div>
           </div>
         </div>
 
-        <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
+        <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.16em] text-[#0175a6]">
           {card.label}
         </p>
 
@@ -419,7 +419,7 @@ function Team() {
           {card.description}
         </p>
 
-        <div className="mt-8 h-[6px] w-20 bg-blue-600" />
+        <div className="mt-8 h-[6px] w-20 bg-[#03b7f7]" />
       </div>
     )
   }
@@ -442,7 +442,7 @@ function Team() {
   return (
     <section
       id="team"
-      className="team-mobile-compact subtle-grid bg-[#eef3fb] px-4 pt-0 pb-0 scroll-mt-24 sm:px-6 md:pb-20"
+      className="team-mobile-compact bg-[#f4f6f8] px-4 pt-0 pb-0 scroll-mt-24 sm:px-6 md:pb-20"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -532,7 +532,7 @@ function Team() {
                 }}
                 className={`h-2.5 w-2.5 rounded-full transition ${
                   index === activeIndex
-                    ? 'bg-[#ff4fa3]'
+                    ? 'bg-[#03b7f7]'
                     : 'bg-slate-300 hover:bg-slate-400'
                 }`}
                 aria-label={`Show team card ${index + 1}`}

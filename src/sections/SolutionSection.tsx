@@ -6,7 +6,7 @@ function SolutionSection() {
   return (
     <section
       id="product"
-      className="dark-subtle-grid bg-slate-950 px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
+      className="bg-[#00233d] px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader

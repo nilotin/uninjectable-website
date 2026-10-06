@@ -45,13 +45,13 @@ const decisionContext = [
 function DashboardMockup() {
   return (
     <div className="relative">
-      <div className="absolute -inset-4 rounded-none bg-blue-600/20 blur-3xl md:-inset-6" />
+      <div className="absolute -inset-4 rounded-[4px] bg-[#03b7f7]/[0.06] blur-3xl md:-inset-6" />
 
-      <div className="enterprise-panel-dark relative overflow-hidden rounded-none bg-slate-900/90 p-2 backdrop-blur md:p-3">
-        <div className="rounded-none border border-white/10 bg-slate-950">
+      <div className="enterprise-panel-dark relative overflow-hidden rounded-[4px] bg-[#1a1f26]/95 p-2 backdrop-blur md:p-3">
+        <div className="rounded-[4px] border border-white/10 bg-[#12161b]">
           <div className="console-bar flex items-center justify-between px-4 py-3 md:px-5 md:py-4">
             <div>
-              <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-cyan-300 md:text-xs md:tracking-[0.18em]">
+              <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-[#4cc9f9] md:text-xs md:tracking-[0.18em]">
                 Live action trace
               </p>
               <h3 className="mt-1 text-base font-semibold text-white md:text-lg">
@@ -59,14 +59,14 @@ function DashboardMockup() {
               </h3>
             </div>
 
-            <div className="hidden items-center gap-2 rounded-none border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:flex">
-              <span className="h-1.5 w-1.5 rounded-none bg-green-400" />
+            <div className="hidden items-center gap-2 rounded-[4px] border border-green-400/20 bg-green-400/10 px-3 py-1 text-xs font-medium text-green-300 sm:flex">
+              <span className="h-1.5 w-1.5 rounded-[4px] bg-green-400" />
               Live
             </div>
           </div>
 
           <div className="grid gap-3 p-3 md:gap-4 md:p-5 lg:grid-cols-[1fr_0.85fr]">
-            <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+            <div className="rounded-[4px] border border-white/10 bg-white/[0.04] p-3 md:p-5">
               <div className="mb-4 flex items-center justify-between gap-3 md:mb-5">
                 <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Event Trace
@@ -94,7 +94,7 @@ function DashboardMockup() {
                     </div>
 
                     <span
-                      className={`col-span-2 w-fit rounded-none px-2 py-1 text-[9px] font-semibold uppercase md:col-span-1 md:text-[10px] ${event.tone}`}
+                      className={`col-span-2 w-fit rounded-[4px] px-2 py-1 text-[9px] font-semibold uppercase md:col-span-1 md:text-[10px] ${event.tone}`}
                     >
                       {event.status}
                     </span>
@@ -104,7 +104,7 @@ function DashboardMockup() {
             </div>
 
             <div className="grid gap-3 md:space-y-4">
-              <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+              <div className="rounded-[4px] border border-white/10 bg-white/[0.04] p-3 md:p-5">
                 <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Policy Violations
                 </p>
@@ -123,7 +123,7 @@ function DashboardMockup() {
                     (name) => (
                       <div
                         key={name}
-                        className="rounded-none border border-red-400/20 bg-red-400/10 px-3 py-1.5"
+                        className="rounded-[4px] border border-red-400/20 bg-red-400/10 px-3 py-1.5"
                       >
                         <span className="font-mono text-[10px] text-red-200 md:text-xs">
                           {name}
@@ -134,12 +134,12 @@ function DashboardMockup() {
                 </div>
               </div>
 
-              <div className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-5">
+              <div className="rounded-[4px] border border-white/10 bg-white/[0.04] p-3 md:p-5">
                 <p className="text-xs font-medium text-slate-300 md:text-sm">
                   Policy Decision
                 </p>
 
-                <div className="mt-3 rounded-none border border-amber-400/20 bg-amber-400/10 p-3 md:mt-4 md:p-4">
+                <div className="mt-3 rounded-[4px] border border-amber-400/20 bg-amber-400/10 p-3 md:mt-4 md:p-4">
                   <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-amber-300 md:text-xs">
                     Review required
                   </p>
@@ -157,7 +157,7 @@ function DashboardMockup() {
               {decisionContext.map((signal) => (
                 <div
                   key={signal.label}
-                  className="rounded-none border border-white/10 bg-white/[0.04] p-3 md:p-4"
+                  className="rounded-[4px] border border-white/10 bg-white/[0.04] p-3 md:p-4"
                 >
                   <p className="font-mono-accent text-[8px] uppercase tracking-[0.14em] text-slate-500 md:text-[10px] md:tracking-[0.16em]">
                     {signal.label}
@@ -172,8 +172,8 @@ function DashboardMockup() {
         </div>
       </div>
 
-      <div className="absolute -bottom-5 left-6 hidden rounded-none border border-cyan-300/20 bg-slate-950/90 px-4 py-3 shadow-xl backdrop-blur md:block">
-        <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-cyan-300">
+      <div className="absolute -bottom-5 left-6 hidden rounded-[4px] border border-[#03b7f7]/30 bg-[#1a1f26]/95 px-4 py-3 shadow-xl backdrop-blur md:block">
+        <p className="font-mono-accent text-[10px] uppercase tracking-[0.16em] text-[#4cc9f9]">
           Provenance graph stored
         </p>
       </div>

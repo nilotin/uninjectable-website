@@ -5,7 +5,7 @@ function UseCases() {
   return (
     <section
       id="use-cases"
-      className="subtle-grid bg-white px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
+      className="bg-white px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -18,9 +18,9 @@ function UseCases() {
           {useCases.map((useCase) => (
             <div
               key={useCase.title}
-              className="use-case-trace-card group pixel-card flex min-h-[260px] w-full min-w-0 flex-col overflow-hidden bg-[#f8fbff] p-4 text-slate-950 transition duration-200 hover:-translate-y-1 md:min-h-[420px] md:p-6 lg:min-h-[520px]"
+              className="use-case-trace-card group pixel-card flex min-h-[260px] w-full min-w-0 flex-col overflow-hidden bg-[#fbfcfd] p-4 text-slate-950 transition duration-200 hover:-translate-y-1 md:min-h-[420px] md:p-6 lg:min-h-[520px]"
             >
-              <div className="pixel-mini-icon mb-5 flex h-14 w-14 shrink-0 items-center justify-center bg-slate-100 text-blue-700 md:mb-8 md:h-16 md:w-16">
+              <div className="pixel-mini-icon mb-5 flex h-14 w-14 shrink-0 items-center justify-center bg-slate-100 text-[#025b83] md:mb-8 md:h-16 md:w-16">
                 <img
                   src={`${import.meta.env.BASE_URL}${useCase.icon}`}
                   alt=""
@@ -57,7 +57,7 @@ function UseCases() {
                   </div>
                 </div>
 
-                <div className="mt-4 h-[5px] w-14 bg-blue-600 transition duration-200 group-hover:bg-[#ff4fa3] md:mt-6 md:h-[6px] md:w-20" />
+                <div className="mt-4 h-[5px] w-14 bg-[#03b7f7] transition duration-200 group-hover:bg-[#03b7f7] md:mt-6 md:h-[6px] md:w-20" />
               </div>
             </div>
           ))}

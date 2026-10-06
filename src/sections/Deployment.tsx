@@ -5,7 +5,7 @@ function Deployment() {
   return (
     <section
       id="deployment"
-      className="subtle-grid bg-[#eef3fb] px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
+      className="bg-[#f4f6f8] px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -18,10 +18,10 @@ function Deployment() {
           {deploymentOptions.map((option, index) => (
             <div
               key={option.title}
-              className={`pixel-card bg-[#f8fbff] p-4 transition duration-200 hover:-translate-y-1 md:p-8 ${
+              className={`pixel-card bg-[#fbfcfd] p-4 transition duration-200 hover:-translate-y-1 md:p-8 ${
               index === 2 ? 'col-span-2 mx-auto w-1/2 min-w-[170px] lg:col-span-1 lg:w-auto lg:min-w-0' : ''
             }`} >
-              <div className="pixel-mini-icon mb-5 flex h-14 w-14 items-center justify-center bg-slate-100 text-blue-700 md:mb-6">
+              <div className="pixel-mini-icon mb-5 flex h-14 w-14 items-center justify-center bg-slate-100 text-[#025b83] md:mb-6">
                 <img
                   src={`${import.meta.env.BASE_URL}${option.icon}`}
                   alt=""
@@ -39,16 +39,16 @@ function Deployment() {
               </p>
 
               <div className="mt-auto pt-8">
-                <div className="h-[6px] w-20 bg-blue-600 transition duration-200 group-hover:bg-[#ff4fa3]" />
+                <div className="h-[6px] w-20 bg-[#03b7f7] transition duration-200 group-hover:bg-[#03b7f7]" />
               </div>
             </div>
           ))}
         </div>
 
-        <div className="pixel-card-dark mt-20 overflow-hidden bg-[#08111f] text-white">
+        <div className="pixel-card-dark mt-20 overflow-hidden bg-[#00233d] text-white">
           <div className="console-bar flex items-center justify-between px-5 py-4">
             <div>
-              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#4cc9f9]">
                 Why Baleena
               </p>
               <h3 className="mt-1 text-lg font-semibold text-white">
@@ -63,7 +63,7 @@ function Deployment() {
 
           <div className="grid gap-8 p-5 md:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>
-              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#4cc9f9]">
                 Not another chatbot dashboard
               </p>
 
@@ -81,7 +81,7 @@ function Deployment() {
               {differentiators.map((item) => (
                 <div
                   key={item.title}
-                  className="pixel-card-dark bg-[#111c2d] p-4 md:p-5"
+                  className="pixel-card-dark bg-[#1a1f26] p-4 md:p-5"
                 >
                   <h4 className="text-[1.25rem] font-extrabold leading-tight text-white md:text-2xl">
                     {item.title}

@@ -18,7 +18,7 @@ function SectionHeader({
       <p
         className={[
           'terminal-eyebrow font-mono-accent text-[13px] font-semibold uppercase tracking-[0.22em]',
-          isDark ? 'text-[#ff4fa3]' : 'text-blue-600',
+          isDark ? 'text-[#03b7f7]' : 'text-[#0175a6]',
         ].join(' ')}
       >
         <span>{eyebrow}</span>

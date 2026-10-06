@@ -32,14 +32,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           </h1>
           <p className="mt-4 text-slate-600">
             Please refresh and try again. If the problem continues, contact{' '}
-            <a href="mailto:info@getbaleena.com" className="text-blue-600 hover:text-blue-700">
+            <a href="mailto:info@getbaleena.com" className="text-[#0175a6] hover:text-[#025b83]">
               info@getbaleena.com
             </a>
             .
           </p>
           <a
             href="/"
-            className="mt-6 inline-block rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white hover:bg-blue-700"
+            className="mt-6 inline-block rounded-lg bg-[#03b7f7] px-5 py-2.5 font-semibold text-white hover:bg-[#12bcf9]"
           >
             Reload homepage
           </a>

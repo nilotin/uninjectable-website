@@ -4,13 +4,13 @@ function CTA() {
   return (
     <section
       id="contact"
-      className="dark-subtle-grid bg-slate-950 px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
+      className="bg-[#12161b] px-4 py-16 scroll-mt-24 sm:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="pixel-card-dark bg-[#08111f] p-8 text-white md:p-12">
+        <div className="pixel-card-dark bg-[#00233d] p-8 text-white md:p-12">
           <div className="mb-10 flex items-start justify-between gap-6">
             <div>
-              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              <p className="font-mono-accent text-xs font-semibold uppercase tracking-[0.18em] text-[#4cc9f9]">
                 Flexible agents. Predictable operations.
               </p>
 

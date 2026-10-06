@@ -9,7 +9,7 @@ function ModuleFolderIcon({
 }: ModuleFolderIconProps) {
   return (
     <img
-      src={`${import.meta.env.BASE_URL}modules/folder-pink.png`}
+      src={`${import.meta.env.BASE_URL}modules/folder-blue.png`}
       alt=""
       aria-hidden="true"
       className={[

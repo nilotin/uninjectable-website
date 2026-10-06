@@ -93,8 +93,9 @@ function Navbar() {
   }, [])
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-800 bg-slate-950/95 text-white backdrop-blur-xl">
-      <div className="border-b border-white/10 bg-slate-950/85 px-4 py-1.5">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#003459] bg-[#00233d]/95 text-white backdrop-blur-xl">
+      <div className="brand-rule" aria-hidden="true" />
+      <div className="border-b border-white/10 bg-[#002b4a]/85 px-4 py-1.5">
         <div className="mx-auto flex max-w-7xl items-center justify-between text-[11px] text-slate-400">
           <span className="font-mono-accent">
             AI Runtime Governance Platform
@@ -116,29 +117,28 @@ function Navbar() {
             setActiveHref(navItems[0]?.href ?? '#product')
             closeMenu()
           }}
-          className="mb-3 flex min-w-0 items-center gap-2 sm:mb-4 sm:gap-3"
+          className="mb-3 flex shrink-0 items-center gap-2 sm:mb-4 sm:gap-3"
         >
           <img
-            src={`${import.meta.env.BASE_URL}baleena-logo.png`}
-            alt="Baleena logo"
-            className="h-10 w-auto shrink-0 sm:h-12 md:h-14"
+            src={`${import.meta.env.BASE_URL}brand/baleena-tail.png`}
+            alt=""
+            aria-hidden="true"
+            className="h-12 w-auto shrink-0 sm:h-14 md:h-[68px]"
           />
 
           <div className="hidden min-[375px]:block">
-            <div className="relative h-9 w-[203px] overflow-hidden md:h-10 md:w-[225px]">
-              <img
-                src={`${import.meta.env.BASE_URL}baleena-title.png`}
-                alt="Baleena"
-                className="absolute -left-[63px] -top-[129px] h-[318px] w-auto max-w-none invert md:-left-[70px] md:-top-[143px] md:h-[353px]"
-              />
-            </div>
-            <span className="font-mono-accent hidden text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:block">
+            <img
+              src={`${import.meta.env.BASE_URL}brand/baleena-wordmark-light.png`}
+              alt="Baleena"
+              className="h-6 w-auto max-w-none md:h-7"
+            />
+            <span className="font-mono-accent mt-1.5 hidden whitespace-nowrap text-[10px] uppercase tracking-[0.18em] text-[#4cc9f9]/70 sm:block">
               Resolve · Enforce · Verify
             </span>
           </div>
         </a>
 
-        <div className="hidden items-end md:flex">
+        <div className="hidden items-end xl:flex">
           <div className="file-tab-rail flex items-end">
             {navItems.map((item) => {
               const isActive = activeHref === item.href
@@ -149,13 +149,13 @@ function Navbar() {
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={[
-                    'folder-tab relative inline-flex min-w-[112px] items-center justify-center',
+                    'folder-tab relative inline-flex min-w-[112px] items-center justify-center whitespace-nowrap',
                     'border-2 border-b-0 px-5 py-3',
                     'font-mono-accent text-[11px] font-extrabold uppercase tracking-[0.1em]',
                     'transition duration-150',
                     isActive
-                      ? 'z-20 translate-y-[2px] border-[#ff4fa3]/80 bg-[#121f34] text-white shadow-[0_-4px_18px_rgba(255,79,163,0.16)]'
-                      : 'z-10 border-slate-700/80 bg-[#0b1424] text-slate-300 hover:translate-y-[1px] hover:border-[#ff4fa3]/45 hover:bg-[#0f1b2d] hover:text-white',
+                      ? 'z-20 translate-y-[2px] border-[#03b7f7]/80 bg-[#00406b] text-white shadow-[0_-2px_10px_rgba(3,183,247,0.08)]'
+                      : 'z-10 border-white/15 bg-[#002b4a] text-slate-300 hover:translate-y-[1px] hover:border-[#03b7f7]/45 hover:bg-[#003459] hover:text-white',
                   ].join(' ')}
                 >
                   {item.label}
@@ -165,7 +165,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="mb-4 hidden md:block">
+        <div className="mb-4 hidden shrink-0 xl:block">
           <Button href="#contact" onClick={() => handleNavClick('#contact')}>
             Request Demo
           </Button>
@@ -173,7 +173,7 @@ function Navbar() {
 
         <button
           onClick={() => setIsOpen((current) => !current)}
-          className="mb-3 shrink-0 border border-white/15 px-3 py-2 text-sm font-medium text-white sm:mb-4 md:hidden"
+          className="mb-3 shrink-0 border border-white/15 px-3 py-2 text-sm font-medium text-white sm:mb-4 xl:hidden"
           aria-label="Toggle navigation menu"
         >
           {isOpen ? 'Close' : 'Menu'}
@@ -181,7 +181,7 @@ function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-slate-950 px-6 py-5 md:hidden">
+        <div className="border-t border-white/10 bg-[#00233d] px-6 py-5 xl:hidden">
           <div className="flex flex-col gap-3">
             {navItems.map((item) => {
               const isActive = activeHref === item.href
@@ -194,8 +194,8 @@ function Navbar() {
                   className={[
                     'border px-3 py-3 text-sm font-semibold transition',
                     isActive
-                      ? 'border-[#ff4fa3]/70 bg-[#ff4fa3]/10 text-white'
-                      : 'border-white/10 bg-white/5 text-slate-300 hover:border-[#ff4fa3]/40 hover:bg-white/10 hover:text-white',
+                      ? 'border-[#03b7f7]/70 bg-[#03b7f7]/10 text-white'
+                      : 'border-white/10 bg-white/5 text-slate-300 hover:border-[#03b7f7]/40 hover:bg-white/10 hover:text-white',
                   ].join(' ')}
                 >
                   {item.label}

@@ -22,8 +22,8 @@ function FeatureCard({
         compactOnMobile ? 'min-h-[280px] p-5 md:min-h-[420px] md:p-6' : 'p-6'
       } ${
         isDark
-          ? 'pixel-card-dark bg-[#0f1b2d] text-white'
-          : 'pixel-card bg-[#f8fbff] text-slate-950'
+          ? 'pixel-card-dark bg-[#1a1f26] text-white'
+          : 'pixel-card bg-[#fbfcfd] text-slate-950'
       }`}
     >
       <div
@@ -31,8 +31,8 @@ function FeatureCard({
           compactOnMobile ? 'h-14 w-14 md:h-16 md:w-16' : 'h-16 w-16'
         } ${
           isDark
-            ? 'bg-[#ff4fa3]/10 text-[#ff4fa3]'
-            : 'bg-slate-100 text-blue-700'
+            ? 'bg-[#03b7f7]/10 text-[#03b7f7]'
+            : 'bg-slate-100 text-[#025b83]'
         }`}
       >
         {isImageIcon ? (
@@ -72,7 +72,7 @@ function FeatureCard({
       <div
         className={`${
           compactOnMobile ? 'mt-6 md:mt-8' : 'mt-8'
-        } h-[6px] w-20 ${isDark ? 'bg-[#ff4fa3]' : 'bg-blue-600'}`}
+        } h-[6px] w-20 ${isDark ? 'bg-[#03b7f7]' : 'bg-[#03b7f7]'}`}
       />
     </div>
   )

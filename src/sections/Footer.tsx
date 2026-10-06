@@ -5,12 +5,17 @@ function Footer() {
         <div>
           <a href="/" className="flex items-center gap-3">
             <img
-              src={`${import.meta.env.BASE_URL}baleena-logo-dark.png`}
-              alt="Baleena logo"
-              className="h-12 w-auto"
+              src={`${import.meta.env.BASE_URL}brand/baleena-tail.png`}
+              alt=""
+              aria-hidden="true"
+              className="h-14 w-auto"
             />
 
-            <span className="text-lg font-bold">Baleena</span>
+            <img
+              src={`${import.meta.env.BASE_URL}brand/baleena-wordmark.png`}
+              alt="Baleena"
+              className="h-6 w-auto"
+            />
           </a>
 
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-600">
@@ -29,13 +34,13 @@ function Footer() {
             <h4 className="font-semibold text-slate-950">Product</h4>
 
             <div className="mt-4 space-y-3 text-slate-600">
-              <a href="#product" className="block hover:text-blue-600">
+              <a href="#product" className="block hover:text-[#0175a6]">
                 Overview
               </a>
-              <a href="#use-cases" className="block hover:text-blue-600">
+              <a href="#use-cases" className="block hover:text-[#0175a6]">
                 Use Cases
               </a>
-              <a href="#how-it-works" className="block hover:text-blue-600">
+              <a href="#how-it-works" className="block hover:text-[#0175a6]">
                 How It Works
               </a>
             </div>
@@ -45,7 +50,7 @@ function Footer() {
             <h4 className="font-semibold text-slate-950">Company</h4>
 
             <div className="mt-4 space-y-3 text-slate-600">
-              <a href="#team" className="block hover:text-blue-600">
+              <a href="#team" className="block hover:text-[#0175a6]">
                 Team
               </a>
 
@@ -53,14 +58,14 @@ function Footer() {
   href="https://www.linkedin.com/company/getbaleena/"
   target="_blank"
   rel="noopener noreferrer"
-  className="block hover:text-blue-600"
+  className="block hover:text-[#0175a6]"
 >
   LinkedIn
 </a>
-              <a href="#contact" className="block hover:text-blue-600">
+              <a href="#contact" className="block hover:text-[#0175a6]">
                 Contact
               </a>
-              <a href="#deployment" className="block hover:text-blue-600">
+              <a href="#deployment" className="block hover:text-[#0175a6]">
                 Deployment
               </a>
             </div>
@@ -72,7 +77,7 @@ function Footer() {
             <div className="mt-4 space-y-3 text-slate-600">
               <a
                 href="mailto:info@getbaleena.com"
-                className="block hover:text-blue-600"
+                className="block hover:text-[#0175a6]"
               >
                 info@getbaleena.com
               </a>
@@ -90,13 +95,13 @@ function Footer() {
           <p>© 2026 Baleena. All rights reserved.</p>
 
           <nav aria-label="Legal" className="flex flex-wrap gap-5">
-            <a href="/security/" className="hover:text-blue-600">
+            <a href="/security/" className="hover:text-[#0175a6]">
               Security
             </a>
-            <a href="/privacy/" className="hover:text-blue-600">
+            <a href="/privacy/" className="hover:text-[#0175a6]">
               Privacy
             </a>
-            <a href="/terms/" className="hover:text-blue-600">
+            <a href="/terms/" className="hover:text-[#0175a6]">
               Terms
             </a>
           </nav>
